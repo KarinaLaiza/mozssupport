@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="msIconGrad" x1="10" y1="8" x2="110" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3D7BFF"/>
+      <stop offset="1" stop-color="#0B1E4D"/>
+    </linearGradient>
+    <linearGradient id="msNodeGrad" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3FD0FF"/>
+      <stop offset="1" stop-color="#3D7BFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- outer hexagon shield -->
+  <path d="M60 4 L109 30 V78 L60 116 L11 78 V30 Z"
+        fill="url(#msIconGrad)" stroke="#3FD0FF" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- inner network / connectivity nodes -->
+  <g stroke="#EAF1FF" stroke-width="2.4" stroke-linecap="round" opacity="0.9">
+    <line x1="60" y1="38" x2="38" y2="66"/>
+    <line x1="60" y1="38" x2="82" y2="66"/>
+    <line x1="38" y1="66" x2="60" y2="88"/>
+    <line x1="82" y1="66" x2="60" y2="88"/>
+    <line x1="38" y1="66" x2="82" y2="66"/>
+  </g>
+  <g fill="url(#msNodeGrad)">
+    <circle cx="60" cy="38" r="7.5"/>
+    <circle cx="38" cy="66" r="6"/>
+    <circle cx="82" cy="66" r="6"/>
+    <circle cx="60" cy="88" r="7.5"/>
+  </g>
+</svg>
