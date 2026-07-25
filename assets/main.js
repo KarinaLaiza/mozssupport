@@ -18,17 +18,28 @@ langButtons.forEach(b=>b.addEventListener('click', ()=>setLang(b.dataset.lang)))
 /* ---------- mobile nav drawer ---------- */
 const burgerBtn = document.querySelector('.burger');
 const navLinksEl = document.querySelector('.nav-links');
+function closeMobileNav(){
+  if(!navLinksEl) return;
+  navLinksEl.classList.remove('open');
+  document.body.classList.remove('nav-open');
+  if(burgerBtn) burgerBtn.setAttribute('aria-expanded', 'false');
+}
+function openMobileNav(){
+  if(!navLinksEl) return;
+  navLinksEl.classList.add('open');
+  document.body.classList.add('nav-open');
+  if(burgerBtn) burgerBtn.setAttribute('aria-expanded', 'true');
+}
 if (burgerBtn && navLinksEl){
   burgerBtn.addEventListener('click', ()=>{
-    const willOpen = !navLinksEl.classList.contains('open');
-    navLinksEl.classList.toggle('open', willOpen);
-    burgerBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    if (navLinksEl.classList.contains('open')) closeMobileNav();
+    else openMobileNav();
   });
   navLinksEl.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=>{
-      navLinksEl.classList.remove('open');
-      burgerBtn.setAttribute('aria-expanded', 'false');
-    });
+    a.addEventListener('click', closeMobileNav);
+  });
+  window.addEventListener('resize', ()=>{
+    if (window.innerWidth > 1080) closeMobileNav();
   });
 }
 
