@@ -67,6 +67,7 @@ nav{
 .logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue-bright),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;font-weight:700;color:#00121f;}
 .logo .grupo{color:var(--text-dim);font-weight:500;font-size:12px;font-family:var(--mono);letter-spacing:0.1em;margin-left:2px;align-self:flex-end;padding-bottom:3px;}
 .nav-links{display:flex;gap:30px;font-size:14.5px;color:var(--text-dim);}
+.nav-links .mobile-only-flex{display:none;}
 .nav-links a{position:relative;padding:4px 0;transition:color .2s;}
 .nav-links a:hover{color:var(--text);}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--cyan);transition:width .25s;}
@@ -396,7 +397,6 @@ footer{background:var(--bg-void);border-top:1px solid var(--line);padding:64px 0
     color:var(--text);text-align:center;
   }
   .nav-links a::after{display:none;}
-  .mobile-only-flex{display:none;}
   .nav-links .lang-toggle.mobile-only-flex{
     display:flex;margin:6px auto 18px;
   }
