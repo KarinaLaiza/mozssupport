@@ -3,36 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MozSupport Grupo | Conectamos. Protegemos. Inovamos. Transformamos.</title>
+<title>In&iacute;cio | MOZSUPPORT GRUPO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" type="image/jpeg" href="assets/logo/logo-mark.jpg">
+<link rel="icon" type="image/png" href="assets/logo/favicon.png">
 </head>
 <body>
-
-<!-- ================= NAV ================= -->
 <header>
   <nav>
-    <a href="#home" class="logo">MozSupport<span class="grupo">GRUPO</span></a>
+    <a href="index.html" class="logo"><img src="assets/logo/logo-wordmark.png" alt="MozSupport Grupo"></a>
     <div class="nav-links">
-      <div class="lang-toggle mobile-only-flex">
-        <button class="active" data-lang="pt">PT</button>
-        <button data-lang="en">EN</button>
+      <div class="lang-switch mobile-only-flex">
+        <button type="button" class="lang-btn"><span class="flag">&#127474;&#127488;</span><span class="code">PT</span></button>
+        <div class="lang-menu">
+          <button data-lang="pt" class="active"><span>&#127474;&#127488;</span> Portugu&ecirc;s</button>
+          <button data-lang="en"><span>&#127468;&#127463;</span> English</button>
+        </div>
       </div>
-      <a href="quem-somos.html" data-pt="Quem Somos" data-en="About Us">Quem Somos</a>
-      <a href="divisoes.html" data-pt="Áreas de Atuação" data-en="Areas of Activity">Áreas de Atuação</a>
-      <a href="internet.html" data-pt="Internet" data-en="Internet">Internet</a>
-      <a href="datacenter.html" data-pt="Data Center" data-en="Data Center">Data Center</a>
-      <a href="contactos.html" data-pt="Contactos" data-en="Contact">Contactos</a>
-      <a href="contactos.html" class="nav-cta mobile-only-flex" data-pt="Falar Connosco" data-en="Talk to Us">Falar Connosco</a>
+      <a href="index.html#inicio" data-pt="In&iacute;cio" data-en="Home">In&iacute;cio</a>
+      <a href="index.html#quem-somos" data-pt="Sobre N&oacute;s" data-en="About Us">Sobre N&oacute;s</a>
+      <div class="has-drop">
+        <span data-pt="Empresas" data-en="Companies">Empresas <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="drop-menu">
+          <a href="conectividade.html"><span class="dot" style="background:var(--blue);"></span><span data-pt="Conectividade" data-en="Connectivity">Conectividade</span></a>
+          <a href="tecnologia-seguranca.html"><span class="dot" style="background:var(--purple);"></span><span data-pt="Tecnologia e Segurança Electrónica" data-en="Technology &amp; Electronic Security">Tecnologia e Segurança Electrónica</span></a>
+          <a href="energia.html"><span class="dot" style="background:var(--orange);"></span><span data-pt="Energia" data-en="Energy">Energia</span></a>
+          <a href="agritech.html"><span class="dot" style="background:var(--green);"></span><span data-pt="Agritech" data-en="Agritech">Agritech</span></a>
+        </div>
+      </div>
+      <a href="conectividade.html" data-pt="Conectividade" data-en="Connectivity">Conectividade</a>
+      <a href="tecnologia-seguranca.html" data-pt="Tecnologia e Segurança Electrónica" data-en="Technology &amp; Electronic Security">Tecnologia e Segurança Electrónica</a>
+      <a href="energia.html" data-pt="Energia" data-en="Energy">Energia</a>
+      <a href="agritech.html" data-pt="Agritech" data-en="Agritech">Agritech</a>
+      <a href="index.html#contactos" data-pt="Contactos" data-en="Contact">Contactos</a>
+      <a href="index.html#contactos" class="nav-cta mobile-only-flex" data-pt="Fale Connosco" data-en="Talk to Us">Fale Connosco</a>
     </div>
     <div class="nav-right">
-      <div class="lang-toggle">
-        <button class="active" data-lang="pt">PT</button>
-        <button data-lang="en">EN</button>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn"><span class="flag">&#127474;&#127488;</span><span class="code">PT</span><svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="lang-menu">
+          <button data-lang="pt" class="active"><span>&#127474;&#127488;</span> Portugu&ecirc;s</button>
+          <button data-lang="en"><span>&#127468;&#127463;</span> English</button>
+        </div>
       </div>
-      <a href="contactos.html" class="nav-cta" data-pt="Falar Connosco" data-en="Talk to Us">Falar Connosco</a>
+      <a href="index.html#contactos" class="nav-cta" data-pt="Fale Connosco" data-en="Talk to Us">Fale Connosco</a>
     </div>
     <button class="burger" aria-label="Menu" aria-expanded="false">
       <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -41,364 +56,263 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
+<section class="hero" id="inicio">
   <div class="hero-grid"></div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <div class="eyebrow" data-pt="MOZSUPPORT GRUPO — MOÇAMBIQUE" data-en="MOZSUPPORT GRUPO — MOZAMBIQUE">MOZSUPPORT GRUPO — MOÇAMBIQUE</div>
-      <h1 data-pt='Tecnologia que liga pessoas, <span>protege negócios</span> e impulsiona o futuro de Moçambique.' data-en='Technology that connects people, <span>protects businesses</span> and drives the future of Mozambique.'>
-        Tecnologia que liga pessoas, <span>protege negócios</span> e impulsiona o futuro de Moçambique.
-      </h1>
-      <p class="lede" data-pt="A MozSupport Grupo é uma empresa moçambicana de tecnologia que desenvolve soluções de conectividade, segurança, transformação digital, energia e inovação para empresas, instituições e famílias." data-en="MozSupport Grupo is a Mozambican technology company delivering connectivity, security, digital transformation, energy and innovation solutions for companies, institutions and families.">
-        A MozSupport Grupo é uma empresa moçambicana de tecnologia que desenvolve soluções de conectividade, segurança, transformação digital, energia e inovação para empresas, instituições e famílias.
-      </p>
+      <div class="eyebrow" data-pt="MOZSUPPORT GRUPO" data-en="MOZSUPPORT GRUPO">MOZSUPPORT GRUPO</div>
+      <h1 data-pt="Solu&ccedil;&otilde;es Integradas para o Desenvolvimento das Comunidades" data-en="Integrated Solutions for Community Development">Solu&ccedil;&otilde;es Integradas para o Desenvolvimento das Comunidades</h1>
+      <p class="lede" data-pt="Conectividade, Tecnologia, Seguran&ccedil;a Electr&oacute;nica, Energia e Agritech para impulsionar o crescimento econ&oacute;mico e melhorar a qualidade de vida das pessoas em Mo&ccedil;ambique." data-en="Connectivity, Technology, Electronic Security, Energy and Agritech to drive economic growth and improve people's quality of life in Mozambique.">Conectividade, Tecnologia, Seguran&ccedil;a Electr&oacute;nica, Energia e Agritech para impulsionar o crescimento econ&oacute;mico e melhorar a qualidade de vida das pessoas em Mo&ccedil;ambique.</p>
       <div class="hero-btns">
-        <a href="contactos.html" class="btn-primary" data-pt="Solicitar Orçamento" data-en="Request a Quote">Solicitar Orçamento</a>
-        <a href="contactos.html" class="btn-secondary" data-pt="Pedir Suporte" data-en="Get Support">Pedir Suporte</a>
-        <a href="divisoes.html" class="btn-ghost" data-pt="Conhecer Serviços →" data-en="Explore Services →">Conhecer Serviços →</a>
-      </div>
-    </div>
-  </div>
-  <div class="stat-strip">
-    <div class="stat-grid">
-      <div class="stat"><div class="num" data-count="1200">0</div><div class="lab" data-pt="Clientes activos" data-en="Active clients">Clientes activos</div></div>
-      <div class="stat"><div class="num" data-count="340">0</div><div class="lab" data-pt="Projectos concluídos" data-en="Completed projects">Projectos concluídos</div></div>
-      <div class="stat"><div class="num" data-count="9">0</div><div class="lab" data-pt="Anos de experiência" data-en="Years of experience">Anos de experiência</div></div>
-      <div class="stat"><div class="num-static">Sofala+</div><div class="lab" data-pt="Cobertura actual" data-en="Current coverage">Cobertura actual</div></div>
-      <div class="stat"><div class="num-static">&lt; 4h</div><div class="lab" data-pt="Tempo médio de resposta" data-en="Average response time">Tempo médio de resposta</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= QUEM SOMOS ================= -->
-<section class="section about" id="quemsomos">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="reveal">
-        <div class="eyebrow" data-pt="Quem Somos" data-en="About Us">Quem Somos</div>
-        <h2 data-pt="Nascemos da informática. Crescemos até nos tornarmos um grupo." data-en="Born in IT. Grown into a group.">Nascemos da informática. Crescemos até nos tornarmos um grupo.</h2>
-        <div class="about-copy" style="margin-top:22px;">
-          <p data-pt="A MozSupport tem como principal missão tornar-se o parceiro preferencial de soluções em suporte nas áreas de informática, telecomunicações e segurança eletrónica, representando marcas tecnológicas de referência com um elevado nível de profissionalismo." data-en="MozSupport's mission is to become the preferred solutions partner in IT support, telecommunications and electronic security, representing leading technology brands with a high level of professionalism.">A MozSupport tem como principal missão tornar-se o parceiro preferencial de soluções em suporte nas áreas de informática, telecomunicações e segurança eletrónica, representando marcas tecnológicas de referência com um elevado nível de profissionalismo.</p>
-          <p data-pt="Sentimo-nos honrados pela oportunidade de nos apresentarmos e confiantes de que os nossos serviços especializados podem agregar valor significativo à sua organização." data-en="We are honoured by the opportunity to introduce ourselves, confident that our specialised services can add significant value to your organisation.">Sentimo-nos honrados pela oportunidade de nos apresentarmos e confiantes de que os nossos serviços especializados podem agregar valor significativo à sua organização.</p>
-      <a href="quem-somos.html" class="btn-ghost" style="padding-left:0;margin-top:6px;" data-pt="Ler a nossa história completa →" data-en="Read our full story →">Ler a nossa história completa →</a>
-        </div>
-        <div class="timeline">
-          <div class="tl-item"><span>ORIGEM</span><h4 data-pt="Informática" data-en="IT Support">Informática</h4></div>
-          <div class="tl-item"><span>EXPANSÃO</span><h4 data-pt="Redes" data-en="Networks">Redes</h4></div>
-          <div class="tl-item"><span>EXPANSÃO</span><h4 data-pt="Fibra Óptica" data-en="Fibre Optics">Fibra Óptica</h4></div>
-          <div class="tl-item"><span>EXPANSÃO</span><h4 data-pt="Segurança Electrónica" data-en="Electronic Security">Segurança Electrónica</h4></div>
-          <div class="tl-item final"><span>HOJE</span><h4 data-pt="MozSupport Grupo — 6 divisões" data-en="MozSupport Grupo — 6 divisions">MozSupport Grupo — 6 divisões</h4></div>
-        </div>
-      </div>
-      <div class="mvv reveal">
-        <div class="mvv-card">
-          <div class="tag" data-pt="Missão" data-en="Mission">Missão</div>
-          <h4 data-pt="Conectar, proteger e transformar" data-en="Connect, protect and transform">Conectar, proteger e transformar</h4>
-          <p data-pt="Ser o parceiro tecnológico de referência para famílias, empresas e instituições em Moçambique." data-en="Be the reference technology partner for families, businesses and institutions in Mozambique.">Ser o parceiro tecnológico de referência para famílias, empresas e instituições em Moçambique.</p>
-        </div>
-        <div class="mvv-card">
-          <div class="tag" data-pt="Visão" data-en="Vision">Visão</div>
-          <h4 data-pt="Liderar a transformação digital nacional" data-en="Lead national digital transformation">Liderar a transformação digital nacional</h4>
-          <p data-pt="Tornar-se o maior grupo moçambicano de conectividade, segurança e inovação tecnológica." data-en="Become the largest Mozambican group in connectivity, security and technology innovation.">Tornar-se o maior grupo moçambicano de conectividade, segurança e inovação tecnológica.</p>
-        </div>
-        <div class="mvv-card">
-          <div class="tag" data-pt="Valores" data-en="Values">Valores</div>
-          <h4 data-pt="Profissionalismo, proximidade, inovação" data-en="Professionalism, closeness, innovation">Profissionalismo, proximidade, inovação</h4>
-          <p data-pt="A necessidade dos nossos clientes é a razão de tudo o que fazemos." data-en="Our clients' needs are the reason for everything we do.">A necessidade dos nossos clientes é a razão de tudo o que fazemos.</p>
-        </div>
+        <a href="#quem-somos" class="btn-primary" data-pt="Conhe&ccedil;a o Grupo &rarr;" data-en="Meet the Group &rarr;">Conhe&ccedil;a o Grupo &rarr;</a>
+        <a href="#empresas" class="btn-secondary" data-pt="As Nossas Empresas &rarr;" data-en="Our Companies &rarr;">As Nossas Empresas &rarr;</a>
+        <a href="#contactos" class="btn-secondary" data-pt="Contacte-nos" data-en="Contact Us">Contacte-nos</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= DIVISÕES ================= -->
-<section class="section divisions" id="divisoes">
-  <div class="wrap">
+<section class="areas-strip" id="empresas">
+  <div class="wrap section" style="padding-top:56px;">
     <div class="section-head reveal">
-      <div class="eyebrow" data-pt="Áreas de Atuação" data-en="Areas of Activity">Áreas de Atuação</div>
-      <h2 data-pt="Seis áreas. Uma só missão." data-en="Six areas. One mission.">Seis áreas. Uma só missão.</h2>
-      <p data-pt="Cada área de atuação da MozSupport Grupo funciona de forma especializada, mas integrada — para que a tecnologia funcione como um todo." data-en="Each MozSupport Grupo area of activity operates as a specialist, yet integrated — so technology works as a whole.">Cada área de atuação da MozSupport Grupo funciona de forma especializada, mas integrada — para que a tecnologia funcione como um todo.</p>
-      <a href="divisoes.html" class="btn-ghost" style="padding-left:0;margin-top:6px;" data-pt="Ver todas as áreas de atuação →" data-en="See all areas of activity →">Ver todas as áreas de atuação →</a>
+      <div class="eyebrow">O QUE FAZEMOS</div>
+      <h2 data-pt="Quatro &aacute;reas. Um s&oacute; prop&oacute;sito." data-en="Four areas. One purpose.">Quatro &aacute;reas. Um s&oacute; prop&oacute;sito.</h2>
+      <p data-pt="Cada &aacute;rea da MOZSUPPORT GRUPO tem uma p&aacute;gina pr&oacute;pria em desenvolvimento, com informa&ccedil;&atilde;o detalhada sobre os seus servi&ccedil;os." data-en="Each MOZSUPPORT GRUPO area has its own page under development, with detailed information about its services.">Cada &aacute;rea da MOZSUPPORT GRUPO tem uma p&aacute;gina pr&oacute;pria em desenvolvimento, com informa&ccedil;&atilde;o detalhada sobre os seus servi&ccedil;os.</p>
     </div>
-    <div class="div-grid reveal">
-      <a class="div-card" href="connectivity.html" style="--accent:#3D7BFF;display:block;">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8.2 16a6.5 6.5 0 0 1 7.6 0"/><circle cx="12" cy="19.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
-        <div class="sub">Connectivity</div>
-        <h3 data-pt="MozSupport Connectivity" data-en="MozSupport Connectivity">MozSupport Connectivity</h3>
-        <ul>
-          <li>ISP</li><li>Internet PPPoE</li><li>Starlink</li><li>Fibra</li>
-          <li>Wireless</li><li>VPN</li><li>TV Online</li><li>Cloud</li>
-        </ul>
-        <span class="portal-cta" style="margin-top:14px;" data-pt="Saiba mais &rarr;" data-en="Learn more &rarr;">Saiba mais &rarr;</span>
-      </a>
-      <a class="div-card" href="security.html" style="--accent:#E0455C;display:block;">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9V6l7-3z"/><path d="M9.3 12.2l1.8 1.8 3.6-3.8"/></svg></div>
-        <div class="sub">Security</div>
-        <h3 data-pt="MozSupport Security" data-en="MozSupport Security">MozSupport Security</h3>
-        <ul>
-          <li>CCTV</li><li data-pt="Alarmes" data-en="Alarms">Alarmes</li>
-          <li data-pt="Controlo de acesso" data-en="Access control">Controlo de acesso</li><li data-pt="Biometria" data-en="Biometrics">Biometria</li>
-          <li data-pt="Cerca Eléctrica" data-en="Electric fence">Cerca Eléctrica</li><li data-pt="Monitorização" data-en="Monitoring">Monitorização</li>
-        </ul>
-        <span class="portal-cta" style="margin-top:14px;" data-pt="Saiba mais &rarr;" data-en="Learn more &rarr;">Saiba mais &rarr;</span>
-      </a>
-      <a class="div-card" href="it-solutions.html" style="--accent:#3FD0FF;display:block;">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="6" rx="1.4"/><rect x="3.5" y="14" width="17" height="6" rx="1.4"/><circle cx="7.2" cy="7" r="0.6" fill="currentColor" stroke="none"/><circle cx="7.2" cy="17" r="0.6" fill="currentColor" stroke="none"/></svg></div>
-        <div class="sub">IT Solutions</div>
-        <h3 data-pt="MozSupport IT Solutions" data-en="MozSupport IT Solutions">MozSupport IT Solutions</h3>
-        <ul>
-          <li data-pt="Infraestrutura" data-en="Infrastructure">Infraestrutura</li><li>Datacenter</li><li>Cloud</li>
-          <li data-pt="Virtualização" data-en="Virtualisation">Virtualização</li><li>Microsoft</li><li>Linux</li>
-          <li>Mikrotik</li><li>Cisco</li><li>Backup</li><li data-pt="Cibersegurança" data-en="Cybersecurity">Cibersegurança</li><li data-pt="Consultoria" data-en="Consulting">Consultoria</li>
-        </ul>
-        <span class="portal-cta" style="margin-top:14px;" data-pt="Saiba mais &rarr;" data-en="Learn more &rarr;">Saiba mais &rarr;</span>
-      </a>
-      <a class="div-card" href="energy.html" style="--accent:#1FCB93;display:block;">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L6 14h5l-1 7 8-11h-5l1-7z"/></svg></div>
-        <div class="sub">Energy</div>
-        <h3 data-pt="MozSupport Energy" data-en="MozSupport Energy">MozSupport Energy</h3>
-        <ul>
-          <li data-pt="Energia Solar" data-en="Solar energy">Energia Solar</li><li>UPS</li><li>Inversores</li>
-          <li>Baterias</li><li data-pt="Eficiência energética" data-en="Energy efficiency">Eficiência energética</li>
-        </ul>
-        <span class="portal-cta" style="margin-top:14px;" data-pt="Saiba mais &rarr;" data-en="Learn more &rarr;">Saiba mais &rarr;</span>
-      </a>
-      <a class="div-card" href="agritech.html" style="--accent:#7BD65B;display:block;">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1-6 1.5-13 12-15 1.5 8-3 14-12 15z"/><path d="M6.5 19.5C9 14 12 11 17.5 8"/></svg></div>
+    <div class="area-grid">
+      <div class="area-card reveal" style="--accent:var(--blue);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8.2 16a6.5 6.5 0 0 1 7.6 0"/><circle cx="12" cy="19.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+        <h3 data-pt="Conectividade" data-en="Connectivity">Conectividade</h3>
+        <div class="sub">Conectividade</div>
+        <p data-pt="Solu&ccedil;&otilde;es de telecomunica&ccedil;&otilde;es fi&aacute;veis, seguras e de elevada qualidade." data-en="Reliable, secure, high-quality telecommunications solutions.">Solu&ccedil;&otilde;es de telecomunica&ccedil;&otilde;es fi&aacute;veis, seguras e de elevada qualidade.</p>
+        <a href="conectividade.html" class="explore" data-pt="Explorar &rarr;" data-en="Explore &rarr;">Explorar &rarr;</a>
+      </div>
+      <div class="area-card reveal" style="--accent:var(--purple);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9V6l7-3z"/><path d="M9.3 12.2l1.8 1.8 3.6-3.8"/></svg></div>
+        <h3 data-pt="Tecnologia e Segurança Electrónica" data-en="Technology &amp; Electronic Security">Tecnologia e Segurança Electrónica</h3>
+        <div class="sub">Tecnologia &amp; Seguran&ccedil;a Electr&oacute;nica</div>
+        <p data-pt="Efici&ecirc;ncia operacional, prote&ccedil;&atilde;o de pessoas e patrim&oacute;nios, e transforma&ccedil;&atilde;o digital." data-en="Operational efficiency, protection of people and assets, and digital transformation.">Efici&ecirc;ncia operacional, prote&ccedil;&atilde;o de pessoas e patrim&oacute;nios, e transforma&ccedil;&atilde;o digital.</p>
+        <a href="tecnologia-seguranca.html" class="explore" data-pt="Explorar &rarr;" data-en="Explore &rarr;">Explorar &rarr;</a>
+      </div>
+      <div class="area-card reveal" style="--accent:var(--orange);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L6 14h5l-1 7 8-11h-5l1-7z"/></svg></div>
+        <h3 data-pt="Energia" data-en="Energy">Energia</h3>
+        <div class="sub">Energia</div>
+        <p data-pt="Combust&iacute;veis e energias renov&aacute;veis para maior efici&ecirc;ncia, mobilidade e sustentabilidade." data-en="Fuels and renewable energy for greater efficiency, mobility and sustainability.">Combust&iacute;veis e energias renov&aacute;veis para maior efici&ecirc;ncia, mobilidade e sustentabilidade.</p>
+        <a href="energia.html" class="explore" data-pt="Explorar &rarr;" data-en="Explore &rarr;">Explorar &rarr;</a>
+      </div>
+      <div class="area-card reveal" style="--accent:var(--green);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1-6 1.5-13 12-15 1.5 8-3 14-12 15z"/><path d="M6.5 19.5C9 14 12 11 17.5 8"/></svg></div>
+        <h3 data-pt="Agritech" data-en="Agritech">Agritech</h3>
         <div class="sub">Agritech</div>
-        <h3 data-pt="MozSupport Agritech" data-en="MozSupport Agritech">MozSupport Agritech</h3>
-        <ul>
-          <li>IoT</li><li data-pt="Sensores" data-en="Sensors">Sensores</li><li data-pt="Meteorologia" data-en="Weather stations">Meteorologia</li>
-          <li data-pt="Automação agrícola" data-en="Farm automation">Automação agrícola</li><li data-pt="Irrigação inteligente" data-en="Smart irrigation">Irrigação inteligente</li>
-        </ul>
-        <span class="portal-cta" style="margin-top:14px;" data-pt="Saiba mais &rarr;" data-en="Learn more &rarr;">Saiba mais &rarr;</span>
-      </a>
-      <a class="div-card" href="investimentos.html" style="--accent:#F0B23D;display:block;">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 17 9.5 11 13.5 15 20.5 7"/><polyline points="14.5 7 20.5 7 20.5 13"/></svg></div>
-        <div class="sub">Investimentos</div>
-        <h3 data-pt="MozSupport Investimentos" data-en="MozSupport Investments">MozSupport Investimentos</h3>
-        <ul>
-          <li data-pt="Projectos" data-en="Projects">Projectos</li><li data-pt="Parcerias" data-en="Partnerships">Parcerias</li>
-          <li data-pt="Investimentos" data-en="Investments">Investimentos</li><li data-pt="Incubação" data-en="Incubation">Incubação</li>
-        </ul>
-        <span class="portal-cta" style="margin-top:14px;" data-pt="Saiba mais &rarr;" data-en="Learn more &rarr;">Saiba mais &rarr;</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= INTERNET ================= -->
-<section class="section internet" id="internet">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-pt="Internet" data-en="Internet">Internet</div>
-      <h2 data-pt="Pacotes para famílias e empresas" data-en="Packages for families and businesses">Pacotes para famílias e empresas</h2>
-      <p data-pt="Internet residencial, empresarial, dedicada e Starlink, com TV Online incluída. Preços sem IVA." data-en="Residential, business, dedicated and Starlink internet, with TV Online included. Prices excl. VAT.">Internet residencial, empresarial, dedicada e Starlink, com TV Online incluída. Preços sem IVA.</p>
-      <a href="internet.html" class="btn-ghost" style="padding-left:0;margin-top:6px;" data-pt="Ver página completa de Internet →" data-en="View full Internet page →">Ver página completa de Internet →</a>
-    </div>
-
-    <div class="plan-tabs reveal">
-      <button class="plan-tab active" data-target="p-res" data-pt="Residencial" data-en="Residential">Residencial</button>
-      <button class="plan-tab" data-target="p-corp" data-pt="Empresarial / Dedicada" data-en="Business / Dedicated">Empresarial / Dedicada</button>
-      <button class="plan-tab" data-target="p-tv" data-pt="TV Online" data-en="TV Online">TV Online</button>
-    </div>
-
-    <div class="reveal">
-      <div class="plan-panel active" id="p-res">
-        <div class="svc-grid">
-          <div class="svc-card" style="--accent:#3D7BFF;">
-            <h4><span class="dot"></span>Pacote Inicial</h4>
-            <p data-pt="15 Mbps / 15 Mbps ilimitado — ideal para navegação e redes sociais do dia-a-dia." data-en="15 Mbps / 15 Mbps unlimited — ideal for everyday browsing and social media.">15 Mbps / 15 Mbps ilimitado — ideal para navegação e redes sociais do dia-a-dia.</p>
-          </div>
-          <div class="svc-card" style="--accent:#3D7BFF;">
-            <h4><span class="dot"></span>Pacote Família</h4>
-            <p data-pt="20 Mbps / 20 Mbps ilimitado — para várias pessoas e dispositivos em simultâneo." data-en="20 Mbps / 20 Mbps unlimited — for several people and devices at once.">20 Mbps / 20 Mbps ilimitado — para várias pessoas e dispositivos em simultâneo.</p>
-          </div>
-          <div class="svc-card" style="--accent:#3D7BFF;">
-            <h4><span class="dot"></span>Pacote Super Família</h4>
-            <p data-pt="30 Mbps / 30 Mbps ilimitado — streaming, trabalho remoto e jogos online." data-en="30 Mbps / 30 Mbps unlimited — streaming, remote work and online gaming.">30 Mbps / 30 Mbps ilimitado — streaming, trabalho remoto e jogos online.</p>
-          </div>
-        </div>
-        <p class="plan-note" data-pt="Instalação e equipamento incluídos na proposta. Fale connosco para receber o valor ajustado ao seu pacote." data-en="Installation and equipment included in the proposal. Talk to us to receive the price for your package.">Instalação e equipamento incluídos na proposta. Fale connosco para receber o valor ajustado ao seu pacote.</p>
-      </div>
-      <div class="plan-panel" id="p-corp">
-        <div class="svc-grid">
-          <div class="svc-card" style="--accent:#3D7BFF;">
-            <h4><span class="dot"></span>Pacote Dedicado 1</h4>
-            <p data-pt="2 Mbps / 2 Mbps dedicados — ligação exclusiva com SLA garantido." data-en="2 Mbps / 2 Mbps dedicated — exclusive connection with guaranteed SLA.">2 Mbps / 2 Mbps dedicados — ligação exclusiva com SLA garantido.</p>
-          </div>
-          <div class="svc-card" style="--accent:#3D7BFF;">
-            <h4><span class="dot"></span>Pacote Dedicado 2</h4>
-            <p data-pt="4 Mbps / 4 Mbps dedicados — para empresas com maior exigência de rede." data-en="4 Mbps / 4 Mbps dedicated — for businesses with higher network demands.">4 Mbps / 4 Mbps dedicados — para empresas com maior exigência de rede.</p>
-          </div>
-        </div>
-        <p class="plan-note" data-pt="Também disponível: Starlink corporativo e enlaces Wireless dedicados sob consulta." data-en="Also available: business Starlink and dedicated wireless links on request.">Também disponível: Starlink corporativo e enlaces Wireless dedicados sob consulta.</p>
-      </div>
-      <div class="plan-panel" id="p-tv">
-        <div class="svc-grid">
-          <div class="svc-card" style="--accent:#3D7BFF;">
-            <h4><span class="dot"></span><span data-pt="TV Online — Público Geral" data-en="TV Online — General Public">TV Online — Público Geral</span></h4>
-            <p data-pt="+500 canais · Futebol ao vivo · Filmes e séries · Kids · Novelas — disponível em Smart TV Android e TV Box." data-en="+500 channels · Live football · Movies & series · Kids · Soap operas — available on Smart TV Android and TV Box.">+500 canais · Futebol ao vivo · Filmes e séries · Kids · Novelas — disponível em Smart TV Android e TV Box.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="calc-box reveal">
-      <div>
-        <div class="eyebrow" data-pt="Calculadora de Pacote" data-en="Package Calculator">Calculadora de Pacote</div>
-        <h3 style="font-size:20px;margin-bottom:20px;" data-pt="Qual pacote é ideal para si?" data-en="Which package fits you?">Qual pacote é ideal para si?</h3>
-        <div class="calc-q">
-          <label data-pt="Quantas pessoas usam a Internet ao mesmo tempo?" data-en="How many people use the internet at once?">Quantas pessoas usam a Internet ao mesmo tempo?</label>
-          <div class="calc-opts" data-group="people">
-            <button class="calc-opt sel" data-val="1">1–2</button>
-            <button class="calc-opt" data-val="2">3–5</button>
-            <button class="calc-opt" data-val="3">6+</button>
-          </div>
-        </div>
-        <div class="calc-q">
-          <label data-pt="Uso principal" data-en="Main usage">Uso principal</label>
-          <div class="calc-opts" data-group="usage">
-            <button class="calc-opt sel" data-val="1" data-pt="Navegação e redes sociais" data-en="Browsing & social media">Navegação e redes sociais</button>
-            <button class="calc-opt" data-val="2" data-pt="Streaming e trabalho remoto" data-en="Streaming & remote work">Streaming e trabalho remoto</button>
-            <button class="calc-opt" data-val="3" data-pt="Empresa / servidores" data-en="Business / servers">Empresa / servidores</button>
-          </div>
-        </div>
-      </div>
-      <div class="calc-result">
-        <div class="rlabel" data-pt="Recomendação" data-en="Recommendation">Recomendação</div>
-        <div class="rname" id="calc-name">Pacote Inicial</div>
-        <div class="rspeed" id="calc-speed">15 Mbps / 15 Mbps ilimitado</div>
-        <p style="font-size:12.5px;color:var(--text-faint);margin-top:6px;" data-pt="Peça-nos o valor exacto para este pacote — sem compromisso." data-en="Ask us for the exact price of this package — no commitment.">Peça-nos o valor exacto para este pacote — sem compromisso.</p>
-        <a href="contactos.html" class="btn-primary" style="margin-top:16px;text-align:center;" data-pt="Solicitar Proposta" data-en="Request a Quote">Solicitar Proposta</a>
-      </div>
-    </div>
-    </div>
-</section>
-
-<!-- ================= DATA CENTER ================= -->
-<section class="section feature-strip" id="datacenter">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-pt="Data Center" data-en="Data Center">Data Center</div>
-      <h2 data-pt="Infraestrutura para o seu negócio correr sem parar" data-en="Infrastructure to keep your business running">Infraestrutura para o seu negócio correr sem parar</h2>
-      <a href="datacenter.html" class="btn-ghost" style="padding-left:0;margin-top:6px;" data-pt="Ver página completa →" data-en="View full page →">Ver página completa →</a>
-    </div>
-    <div class="fs-cols reveal">
-      <div class="fs-col" style="--accent:#3FD0FF;">
-        <h3><span class="dot"></span>Cloud &amp; Hospedagem</h3>
-        <p class="desc" data-pt="Ambientes cloud e hospedagem dedicados." data-en="Dedicated cloud and hosting environments.">Ambientes cloud e hospedagem dedicados.</p>
-        <ul>
-          <li>Cloud</li><li data-pt="Hospedagem" data-en="Hosting">Hospedagem</li><li data-pt="Servidores Virtuais" data-en="Virtual Servers">Servidores Virtuais</li>
-        </ul>
-      </div>
-      <div class="fs-col" style="--accent:#3D7BFF;">
-        <h3><span class="dot"></span>Backup &amp; Colocation</h3>
-        <p class="desc" data-pt="Continuidade de negócio garantida." data-en="Guaranteed business continuity.">Continuidade de negócio garantida.</p>
-        <ul>
-          <li>Backup</li><li>Colocation</li><li data-pt="Recuperação de desastres" data-en="Disaster recovery">Recuperação de desastres</li>
-        </ul>
-      </div>
-      <div class="fs-col" style="--accent:#1FCB93;">
-        <h3><span class="dot"></span><span data-pt="Monitorização" data-en="Monitoring">Monitorização</span></h3>
-        <p class="desc" data-pt="Visibilidade contínua da infraestrutura." data-en="Continuous infrastructure visibility.">Visibilidade contínua da infraestrutura.</p>
-        <ul>
-          <li data-pt="Monitorização 24/7" data-en="24/7 Monitoring">Monitorização 24/7</li><li data-pt="Virtualização" data-en="Virtualisation">Virtualização</li><li>SLA</li>
-        </ul>
+        <p data-pt="Tecnologia aplicada &agrave; agricultura para produtividade, sustentabilidade e seguran&ccedil;a alimentar." data-en="Technology applied to agriculture for productivity, sustainability and food security.">Tecnologia aplicada &agrave; agricultura para produtividade, sustentabilidade e seguran&ccedil;a alimentar.</p>
+        <a href="agritech.html" class="explore" data-pt="Explorar &rarr;" data-en="Explore &rarr;">Explorar &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= SOLUÇÕES EMPRESARIAIS + ENGENHARIA ================= -->
-<section class="section feature-strip" style="padding-top:0;">
+<section class="stats-band">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-pt="Soluções Empresariais & Engenharia" data-en="Business Solutions & Engineering">Soluções Empresariais &amp; Engenharia</div>
-      <h2 data-pt="Da consultoria à instalação em campo" data-en="From consulting to field installation">Da consultoria à instalação em campo</h2>
-    </div>
-    <div class="fs-cols reveal">
-      <div class="fs-col" style="--accent:#F0B23D;">
-        <h3><span class="dot"></span><span data-pt="Soluções Empresariais" data-en="Business Solutions">Soluções Empresariais</span></h3>
-        <ul>
-          <li>ERP</li><li>CRM</li><li>Websites</li><li data-pt="Email Corporativo" data-en="Corporate Email">Email Corporativo</li>
-          <li data-pt="Domínios" data-en="Domains">Domínios</li><li data-pt="Aplicações" data-en="Applications">Aplicações</li><li data-pt="Automação" data-en="Automation">Automação</li>
-        </ul>
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <div><div class="num" data-count="9">0</div><div class="lab" data-pt="Anos de Experi&ecirc;ncia" data-en="Years of Experience">Anos de Experi&ecirc;ncia</div></div>
       </div>
-      <div class="fs-col" style="--accent:#E0455C;">
-        <h3><span class="dot"></span><span data-pt="Engenharia de Projectos" data-en="Project Engineering">Engenharia de Projectos</span></h3>
-        <ul>
-          <li>Fibra Óptica</li><li data-pt="Fusão" data-en="Fusion splicing">Fusão</li><li>OTDR</li><li>Redes</li>
-          <li data-pt="Torres Wireless" data-en="Wireless Towers">Torres Wireless</li><li>Backbone</li>
-        </ul>
+      <div class="stat-item reveal">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19c1-3.4 3.4-5.2 6.5-5.2s5.5 1.8 6.5 5.2"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 13.6c2.4 0.3 4 1.9 4.8 4.6"/></svg></div>
+        <div><div class="num" data-count="1200" data-prefix="+">0</div><div class="lab" data-pt="Clientes Satisfeitos" data-en="Satisfied Clients">Clientes Satisfeitos</div></div>
       </div>
-      <div class="fs-col" style="--accent:#7BD65B;">
-        <h3><span class="dot"></span><span data-pt="Parceiros Tecnológicos" data-en="Technology Partners">Parceiros Tecnológicos</span></h3>
-        <div class="partners-row" style="margin-top:6px;">
-          <span class="partner-badge">Cisco</span><span class="partner-badge">MikroTik</span><span class="partner-badge">Ubiquiti</span>
-        </div>
-        <div class="partners-row" style="margin-top:10px;">
-          <span class="partner-badge">TP-Link</span><span class="partner-badge">Huawei</span><span class="partner-badge">Microsoft</span>
-        </div>
+      <div class="stat-item reveal">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5"/><line x1="3" y1="12.5" x2="21" y2="12.5"/></svg></div>
+        <div><div class="num" data-count="340" data-prefix="+">0</div><div class="lab" data-pt="Projectos Conclu&iacute;dos" data-en="Completed Projects">Projectos Conclu&iacute;dos</div></div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="2.8"/><circle cx="16" cy="9" r="2.8"/><path d="M2.5 19c0.8-3 2.8-4.6 5.5-4.6s4.7 1.6 5.5 4.6"/><path d="M10.5 19c0.8-3 2.8-4.6 5.5-4.6s4.7 1.6 5.5 4.6"/></svg></div>
+        <div><div class="num" data-count="20" data-prefix="+">0</div><div class="lab" data-pt="Comunidades Impactadas" data-en="Communities Impacted">Comunidades Impactadas</div></div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="7.5" x2="16" y2="7.5"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16.5" x2="12.5" y2="16.5"/></svg></div>
+        <div><div class="num" data-count="4">0</div><div class="lab" data-pt="Empresas no Grupo" data-en="Companies in the Group">Empresas no Grupo</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PORTAIS / SUPORTE ================= -->
-<!-- ================= SETORES QUE SERVIMOS ================= -->
-<section class="section" style="padding-bottom:60px;" id="setores">
+<section class="section" style="padding-bottom:70px;">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-pt="Setores que Servimos" data-en="Sectors We Serve">Setores que Servimos</div>
-      <h2 data-pt="Experiência em diferentes mercados" data-en="Experience across different markets">Experiência em diferentes mercados</h2>
-      <p data-pt="Da administração pública ao comércio, adaptamos as nossas soluções à realidade de cada sector." data-en="From government to retail, we adapt our solutions to each sector's reality.">Da administração pública ao comércio, adaptamos as nossas soluções à realidade de cada sector.</p>
+    <div class="section-head reveal" style="margin:0 auto 40px;text-align:center;max-width:600px;">
+      <div class="eyebrow" style="justify-content:center;">SECTORES QUE SERVIMOS</div>
+      <h2 data-pt="Impacto em diferentes sectores da sociedade" data-en="Impact across different sectors of society">Impacto em diferentes sectores da sociedade</h2>
     </div>
-    <div class="partners-row reveal" style="flex-wrap:wrap;">
-      <span class="partner-badge" data-pt="Governo" data-en="Government">Governo</span>
-      <span class="partner-badge" data-pt="Educação" data-en="Education">Educação</span>
-      <span class="partner-badge" data-pt="Saúde" data-en="Healthcare">Saúde</span>
-      <span class="partner-badge" data-pt="Banca" data-en="Banking">Banca</span>
-      <span class="partner-badge" data-pt="Comércio" data-en="Retail">Comércio</span>
-      <span class="partner-badge" data-pt="Hotelaria" data-en="Hospitality">Hotelaria</span>
-      <span class="partner-badge" data-pt="Indústria" data-en="Industry">Indústria</span>
-      <span class="partner-badge">PME</span>
-      <span class="partner-badge">ONG</span>
+    <div class="sectors-grid">
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><line x1="4.5" y1="21" x2="4.5" y2="10"/><line x1="19.5" y1="21" x2="19.5" y2="10"/><polygon points="12 3 21 9 3 9"/><line x1="9" y1="13" x2="9" y2="18"/><line x1="15" y1="13" x2="15" y2="18"/></svg></div><span data-pt="Governo" data-en="Government">Governo</span></div>
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="9" height="18"/><rect x="13" y="8" width="7" height="13"/><line x1="7" y1="7" x2="7" y2="7.01"/><line x1="10" y1="7" x2="10" y2="7.01"/><line x1="7" y1="11" x2="7" y2="11.01"/><line x1="10" y1="11" x2="10" y2="11.01"/></svg></div><span data-pt="Empresas" data-en="Businesses">Empresas</span></div>
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><span data-pt="Hospitais" data-en="Hospitals">Hospitais</span></div>
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1-6 1.5-13 12-15 1.5 8-3 14-12 15z"/></svg></div><span data-pt="Agricultura" data-en="Agriculture">Agricultura</span></div>
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="2.8"/><circle cx="16" cy="9" r="2.8"/><path d="M2.5 19c0.8-3 2.8-4.6 5.5-4.6s4.7 1.6 5.5 4.6"/><path d="M10.5 19c0.8-3 2.8-4.6 5.5-4.6s4.7 1.6 5.5 4.6"/></svg></div><span data-pt="Comunidades" data-en="Communities">Comunidades</span></div>
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 15.8 3.5 9.7A4.7 4.7 0 0 1 12 7a4.7 4.7 0 0 1 8.5 2.7c0 6.1-8.5 10.8-8.5 10.8z"/></svg></div><span data-pt="ONGs" data-en="NGOs">ONGs</span></div>
+      <div class="sector-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V11l5 3.5V11l5 3.5V11l6 4v6z"/><line x1="3" y1="21" x2="21" y2="21"/></svg></div><span data-pt="Ind&uacute;stria" data-en="Industry">Ind&uacute;stria</span></div>
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACTOS ================= -->
-<section class="section contact" id="contactos">
+<section class="section" id="quem-somos" style="background:var(--bg-white);">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" data-pt="Contactos" data-en="Contact">Contactos</div>
-      <h2 data-pt="Vamos conectar o seu projecto" data-en="Let's connect your project">Vamos conectar o seu projecto</h2>
-      <a href="contactos.html" class="btn-ghost" style="padding-left:0;margin-top:6px;" data-pt="Abrir página de contactos →" data-en="Open contact page →">Abrir página de contactos →</a>
+      <div class="eyebrow">QUEM SOMOS</div>
+      <h2 data-pt="Um parceiro estrat&eacute;gico do desenvolvimento" data-en="A strategic partner for development">Um parceiro estrat&eacute;gico do desenvolvimento</h2>
+    </div>
+    <div class="about-wrap">
+      <div class="reveal">
+        <p data-pt="A <strong>MOZSUPPORT GRUPO</strong> &eacute; um grupo empresarial mo&ccedil;ambicano dedicado ao desenvolvimento sustent&aacute;vel, oferecendo solu&ccedil;&otilde;es integradas nas &aacute;reas da Conectividade, Tecnologia, Seguran&ccedil;a Electr&oacute;nica, Energia e Agritech." data-en="<strong>MOZSUPPORT GRUPO</strong> is a Mozambican business group dedicated to sustainable development, offering integrated solutions in Connectivity, Technology, Electronic Security, Energy and Agritech.">A <strong>MOZSUPPORT GRUPO</strong> &eacute; um grupo empresarial mo&ccedil;ambicano dedicado ao desenvolvimento sustent&aacute;vel, oferecendo solu&ccedil;&otilde;es integradas nas &aacute;reas da Conectividade, Tecnologia, Seguran&ccedil;a Electr&oacute;nica, Energia e Agritech.</p>
+        <p data-pt="Acreditamos que o desenvolvimento das comunidades depende do acesso a solu&ccedil;&otilde;es modernas, eficientes e acess&iacute;veis. Por isso, desenvolvemos servi&ccedil;os que melhoram a qualidade de vida das pessoas, fortalecem as empresas, impulsionam a produ&ccedil;&atilde;o agr&iacute;cola e contribuem para o crescimento econ&oacute;mico de Mo&ccedil;ambique." data-en="We believe community development depends on access to modern, efficient and affordable solutions. That's why we develop services that improve people's quality of life, strengthen businesses, boost agricultural production and contribute to Mozambique's economic growth.">Acreditamos que o desenvolvimento das comunidades depende do acesso a solu&ccedil;&otilde;es modernas, eficientes e acess&iacute;veis. Por isso, desenvolvemos servi&ccedil;os que melhoram a qualidade de vida das pessoas, fortalecem as empresas, impulsionam a produ&ccedil;&atilde;o agr&iacute;cola e contribuem para o crescimento econ&oacute;mico de Mo&ccedil;ambique.</p>
+        <p data-pt="Mais do que prestar servi&ccedil;os, somos um parceiro estrat&eacute;gico de comunidades, empresas, institui&ccedil;&otilde;es p&uacute;blicas, organiza&ccedil;&otilde;es n&atilde;o-governamentais, ag&ecirc;ncias de desenvolvimento e investidores, promovendo solu&ccedil;&otilde;es que geram impacto social, econ&oacute;mico e tecnol&oacute;gico." data-en="More than a service provider, we are a strategic partner for communities, businesses, public institutions, NGOs, development agencies and investors, promoting solutions that generate social, economic and technological impact.">Mais do que prestar servi&ccedil;os, somos um parceiro estrat&eacute;gico de comunidades, empresas, institui&ccedil;&otilde;es p&uacute;blicas, organiza&ccedil;&otilde;es n&atilde;o-governamentais, ag&ecirc;ncias de desenvolvimento e investidores, promovendo solu&ccedil;&otilde;es que geram impacto social, econ&oacute;mico e tecnol&oacute;gico.</p>
+      </div>
+      <div class="about-figure reveal">
+        <h4 data-pt="PROP&Oacute;SITO" data-en="PURPOSE">PROP&Oacute;SITO</h4>
+        <p class="quote" data-pt="Transformar comunidades atrav&eacute;s da inova&ccedil;&atilde;o, da tecnologia e de solu&ccedil;&otilde;es sustent&aacute;veis que impulsionam o desenvolvimento econ&oacute;mico e social de Mo&ccedil;ambique." data-en="Transforming communities through innovation, technology and sustainable solutions that drive Mozambique's economic and social development.">Transformar comunidades atrav&eacute;s da inova&ccedil;&atilde;o, da tecnologia e de solu&ccedil;&otilde;es sustent&aacute;veis que impulsionam o desenvolvimento econ&oacute;mico e social de Mo&ccedil;ambique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="o-que-fazemos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">O QUE FAZEMOS</div>
+      <h2 data-pt="Solu&ccedil;&otilde;es que fazem a diferen&ccedil;a" data-en="Solutions that make a difference">Solu&ccedil;&otilde;es que fazem a diferen&ccedil;a</h2>
+    </div>
+    <div class="fazemos-grid">
+      <div class="fazemos-card reveal" style="--accent:var(--blue);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8.2 16a6.5 6.5 0 0 1 7.6 0"/><circle cx="12" cy="19.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+        <h3 data-pt="Conectividade" data-en="Connectivity">Conectividade</h3>
+        <p data-pt="Promovemos a inclus&atilde;o digital atrav&eacute;s de solu&ccedil;&otilde;es de telecomunica&ccedil;&otilde;es que aproximam pessoas, empresas e institui&ccedil;&otilde;es, garantindo comunica&ccedil;&otilde;es fi&aacute;veis, seguras e de elevada qualidade." data-en="We promote digital inclusion through telecommunications solutions that bring people, businesses and institutions closer together, ensuring reliable, secure, high-quality communications.">Promovemos a inclus&atilde;o digital atrav&eacute;s de solu&ccedil;&otilde;es de telecomunica&ccedil;&otilde;es que aproximam pessoas, empresas e institui&ccedil;&otilde;es, garantindo comunica&ccedil;&otilde;es fi&aacute;veis, seguras e de elevada qualidade.</p>
+      </div>
+      <div class="fazemos-card reveal" style="--accent:var(--purple);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9V6l7-3z"/><path d="M9.3 12.2l1.8 1.8 3.6-3.8"/></svg></div>
+        <h3 data-pt="Tecnologia e Seguran&ccedil;a Electr&oacute;nica" data-en="Technology &amp; Electronic Security">Tecnologia e Seguran&ccedil;a Electr&oacute;nica</h3>
+        <p data-pt="Desenvolvemos solu&ccedil;&otilde;es tecnol&oacute;gicas que aumentam a efici&ecirc;ncia operacional, protegem pessoas e patrim&oacute;nios e aceleram a transforma&ccedil;&atilde;o digital das organiza&ccedil;&otilde;es." data-en="We develop technology solutions that increase operational efficiency, protect people and assets, and accelerate the digital transformation of organisations.">Desenvolvemos solu&ccedil;&otilde;es tecnol&oacute;gicas que aumentam a efici&ecirc;ncia operacional, protegem pessoas e patrim&oacute;nios e aceleram a transforma&ccedil;&atilde;o digital das organiza&ccedil;&otilde;es.</p>
+      </div>
+      <div class="fazemos-card reveal" style="--accent:var(--orange);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L6 14h5l-1 7 8-11h-5l1-7z"/></svg></div>
+        <h3 data-pt="Energia" data-en="Energy">Energia</h3>
+        <p data-pt="Fornecemos solu&ccedil;&otilde;es de combust&iacute;veis e energias renov&aacute;veis que apoiam o desenvolvimento das comunidades, empresas e sectores produtivos, garantindo maior efici&ecirc;ncia, mobilidade e sustentabilidade." data-en="We provide fuel and renewable energy solutions that support the development of communities, businesses and productive sectors, ensuring greater efficiency, mobility and sustainability.">Fornecemos solu&ccedil;&otilde;es de combust&iacute;veis e energias renov&aacute;veis que apoiam o desenvolvimento das comunidades, empresas e sectores produtivos, garantindo maior efici&ecirc;ncia, mobilidade e sustentabilidade.</p>
+      </div>
+      <div class="fazemos-card reveal" style="--accent:var(--green);">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1-6 1.5-13 12-15 1.5 8-3 14-12 15z"/><path d="M6.5 19.5C9 14 12 11 17.5 8"/></svg></div>
+        <h3 data-pt="Agritech" data-en="Agritech">Agritech</h3>
+        <p data-pt="Aplicamos tecnologia ao sector agr&iacute;cola para aumentar a produtividade, optimizar os recursos naturais e apoiar pequenos, m&eacute;dios e grandes produtores, promovendo uma agricultura moderna, eficiente e sustent&aacute;vel." data-en="We apply technology to agriculture to increase productivity, optimise natural resources and support small, medium and large producers, promoting modern, efficient and sustainable farming.">Aplicamos tecnologia ao sector agr&iacute;cola para aumentar a produtividade, optimizar os recursos naturais e apoiar pequenos, m&eacute;dios e grandes produtores, promovendo uma agricultura moderna, eficiente e sustent&aacute;vel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="compromisso" style="background:var(--bg-white);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">O NOSSO COMPROMISSO</div>
+      <h2 data-pt="Tecnologia, energia e inova&ccedil;&atilde;o ao servi&ccedil;o das pessoas" data-en="Technology, energy and innovation at the service of people">Tecnologia, energia e inova&ccedil;&atilde;o ao servi&ccedil;o das pessoas</h2>
+      <p data-pt="Na MOZSUPPORT GRUPO, acreditamos que o verdadeiro desenvolvimento acontece quando a tecnologia, a energia e a inova&ccedil;&atilde;o est&atilde;o ao servi&ccedil;o das pessoas. Comprometemo-nos a promover:" data-en="At MOZSUPPORT GRUPO, we believe true development happens when technology, energy and innovation serve people. We are committed to promoting:">Na MOZSUPPORT GRUPO, acreditamos que o verdadeiro desenvolvimento acontece quando a tecnologia, a energia e a inova&ccedil;&atilde;o est&atilde;o ao servi&ccedil;o das pessoas. Comprometemo-nos a promover:</p>
+    </div>
+    <div class="check-grid">
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Inclus&atilde;o digital nas comunidades" data-en="Digital inclusion in communities">Inclus&atilde;o digital nas comunidades</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Desenvolvimento das pequenas e m&eacute;dias empresas" data-en="Development of small and medium enterprises">Desenvolvimento das pequenas e m&eacute;dias empresas</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Expans&atilde;o do acesso &agrave; energia" data-en="Expanding access to energy">Expans&atilde;o do acesso &agrave; energia</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Solu&ccedil;&otilde;es energ&eacute;ticas sustent&aacute;veis" data-en="Sustainable energy solutions">Solu&ccedil;&otilde;es energ&eacute;ticas sustent&aacute;veis</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Moderniza&ccedil;&atilde;o da agricultura" data-en="Modernisation of agriculture">Moderniza&ccedil;&atilde;o da agricultura</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Seguran&ccedil;a alimentar" data-en="Food security">Seguran&ccedil;a alimentar</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Cria&ccedil;&atilde;o de emprego e desenvolvimento de compet&ecirc;ncias locais" data-en="Job creation and local skills development">Cria&ccedil;&atilde;o de emprego e desenvolvimento de compet&ecirc;ncias locais</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Transfer&ecirc;ncia de conhecimento e inova&ccedil;&atilde;o" data-en="Knowledge transfer and innovation">Transfer&ecirc;ncia de conhecimento e inova&ccedil;&atilde;o</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Responsabilidade social e ambiental" data-en="Social and environmental responsibility">Responsabilidade social e ambiental</span></div>
+      <div class="check-item reveal"><div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span data-pt="Parcerias para o desenvolvimento econ&oacute;mico e social de Mo&ccedil;ambique" data-en="Partnerships for Mozambique's economic and social development">Parcerias para o desenvolvimento econ&oacute;mico e social de Mo&ccedil;ambique</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="missao-visao">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">VIS&Atilde;O &amp; MISS&Atilde;O</div>
+      <h2 data-pt="Para onde caminhamos" data-en="Where we are headed">Para onde caminhamos</h2>
+    </div>
+    <div class="vm-grid">
+      <div class="vm-card reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3 data-pt="A Nossa Vis&atilde;o" data-en="Our Vision">A Nossa Vis&atilde;o</h3>
+        <p data-pt="Ser um dos principais grupos empresariais de Mo&ccedil;ambique, reconhecido pela excel&ecirc;ncia, inova&ccedil;&atilde;o e compromisso com o desenvolvimento sustent&aacute;vel, contribuindo para a transforma&ccedil;&atilde;o das comunidades e para o crescimento econ&oacute;mico do pa&iacute;s." data-en="To be one of Mozambique's leading business groups, recognised for excellence, innovation and commitment to sustainable development, contributing to the transformation of communities and the country's economic growth.">Ser um dos principais grupos empresariais de Mo&ccedil;ambique, reconhecido pela excel&ecirc;ncia, inova&ccedil;&atilde;o e compromisso com o desenvolvimento sustent&aacute;vel, contribuindo para a transforma&ccedil;&atilde;o das comunidades e para o crescimento econ&oacute;mico do pa&iacute;s.</p>
+      </div>
+      <div class="vm-card reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></svg></div>
+        <h3 data-pt="A Nossa Miss&atilde;o" data-en="Our Mission">A Nossa Miss&atilde;o</h3>
+        <p data-pt="Desenvolver solu&ccedil;&otilde;es integradas em conectividade, tecnologia, seguran&ccedil;a electr&oacute;nica, energia e agricultura que promovam o crescimento econ&oacute;mico, a inclus&atilde;o social e a melhoria da qualidade de vida das comunidades, atrav&eacute;s da inova&ccedil;&atilde;o, da excel&ecirc;ncia e da sustentabilidade." data-en="To develop integrated solutions in connectivity, technology, electronic security, energy and agriculture that promote economic growth, social inclusion and improved quality of life for communities, through innovation, excellence and sustainability.">Desenvolver solu&ccedil;&otilde;es integradas em conectividade, tecnologia, seguran&ccedil;a electr&oacute;nica, energia e agricultura que promovam o crescimento econ&oacute;mico, a inclus&atilde;o social e a melhoria da qualidade de vida das comunidades, atrav&eacute;s da inova&ccedil;&atilde;o, da excel&ecirc;ncia e da sustentabilidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="valores" style="background:var(--bg-white);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">OS NOSSOS VALORES</div>
+      <h2 data-pt="Aquilo que nos guia todos os dias" data-en="What guides us every day">Aquilo que nos guia todos os dias</h2>
+    </div>
+    <div class="pill-grid">
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Integridade" data-en="Integrity">Integridade</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Excel&ecirc;ncia" data-en="Excellence">Excel&ecirc;ncia</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Inova&ccedil;&atilde;o" data-en="Innovation">Inova&ccedil;&atilde;o</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Sustentabilidade" data-en="Sustainability">Sustentabilidade</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Responsabilidade" data-en="Responsibility">Responsabilidade</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Confian&ccedil;a" data-en="Trust">Confian&ccedil;a</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Compromisso com o Cliente" data-en="Client Commitment">Compromisso com o Cliente</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Desenvolvimento das Comunidades" data-en="Community Development">Desenvolvimento das Comunidades</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="&Eacute;tica" data-en="Ethics">&Eacute;tica</span></div>
+      <div class="pill reveal"><span class="dot"></span><span data-pt="Qualidade" data-en="Quality">Qualidade</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="purpose-band reveal">
+      <div class="eyebrow">SLOGAN</div>
+      <p data-pt="Mais do que uma frase, um compromisso di&aacute;rio com Mo&ccedil;ambique." data-en="More than a phrase, a daily commitment to Mozambique.">Mais do que uma frase, um compromisso di&aacute;rio com Mo&ccedil;ambique.</p>
+      <div class="slogan" data-pt='&ldquo;Solu&ccedil;&otilde;es que <span>Transformam Comunidades</span>.&rdquo;' data-en='&ldquo;Solutions that <span>Transform Communities</span>.&rdquo;'>&ldquo;Solu&ccedil;&otilde;es que <span>Transformam Comunidades</span>.&rdquo;</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contactos" style="background:var(--bg-white);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">CONTACTOS</div>
+      <h2 data-pt="Vamos conversar sobre o seu projecto" data-en="Let's talk about your project">Vamos conversar sobre o seu projecto</h2>
+      <p data-pt="Para d&uacute;vidas, informa&ccedil;&otilde;es ou suporte espec&iacute;fico sobre qualquer uma das nossas &aacute;reas, entre em contacto." data-en="For questions, information or specific support on any of our areas, get in touch.">Para d&uacute;vidas, informa&ccedil;&otilde;es ou suporte espec&iacute;fico sobre qualquer uma das nossas &aacute;reas, entre em contacto.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div><div><h4 data-pt="Morada" data-en="Address">Morada</h4><a href="https://www.google.com/maps/place/Manga,+Beira/@-19.7669035,34.8514221,6871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1f2a420f95585ad3:0x382ac104c3ca3ed9!8m2!3d-19.7659442!4d34.8706935!16s%2Fg%2F1v9gxr8h?entry=ttu&g_ep=EgoyMDI2MDcyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Rua 4, Manga - Nhaconjo, Beira - Moçambique</a></div></div>
+        <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div><div><h4 data-pt="Morada" data-en="Address">Morada</h4><a href="https://www.google.com/maps/place/Manga,+Beira/@-19.7669035,34.8514221,6871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1f2a420f95585ad3:0x382ac104c3ca3ed9!8m2!3d-19.7659442!4d34.8706935!16s%2Fg%2F1v9gxr8h?entry=ttu&g_ep=EgoyMDI2MDcyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Rua 4, Manga - Nhaconjo, Beira - Mo&ccedil;ambique</a></div></div>
         <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></div><div><h4>Email</h4><a href="mailto:support@mozsupport.com">support@mozsupport.com</a></div></div>
         <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.2l1.3 4.2-2 1.5a13 13 0 0 0 6.8 6.8l1.5-2 4.2 1.3V19a1.8 1.8 0 0 1-1.9 1.8C11.2 20.2 3.8 12.8 3.2 6.9 3.1 5.8 3.9 4.9 5 4z"/></svg></div><div><h4 data-pt="Telefone / WhatsApp" data-en="Phone / WhatsApp">Telefone / WhatsApp</h4><a href="https://wa.me/258847026991">+258 84 702 6991</a></div></div>
-        <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></svg></div><div><h4 data-pt="Horário" data-en="Hours">Horário</h4><p data-pt="Seg–Sex: 07:30–17:00 · Suporte 24h para clientes corporativos" data-en="Mon–Fri: 07:30–17:00 · 24h support for corporate clients">Seg–Sex: 07:30–17:00 · Suporte 24h para clientes corporativos</p></div></div>
+        <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></svg></div><div><h4 data-pt="Hor&aacute;rio" data-en="Hours">Hor&aacute;rio</h4><p data-pt="Seg&ndash;Sex: 07:30&ndash;17:00" data-en="Mon&ndash;Fri: 07:30-17:00">Seg&ndash;Sex: 07:30&ndash;17:00</p></div></div>
         <div class="map-embed">
-          <iframe src="https://www.google.com/maps/place/Manga,+Beira/@-19.7669035,34.8514221,6871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1f2a420f95585ad3:0x382ac104c3ca3ed9!8m2!3d-19.7659442!4d34.8706935!16s%2Fg%2F1v9gxr8h?entry=ttu&g_ep=EgoyMDI2MDcyMC4wIKXMDSoASAFQAw%3D%3D&output=embed" width="100%" height="220" style="border:0;" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps?q=-19.7659442,34.8706935&z=16&output=embed" width="100%" height="220" style="border:0;" loading="lazy"></iframe>
         </div>
       </div>
-      <form class="form-box reveal" onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent = (document.documentElement.lang==='en' ? 'Thanks — this is a visual demo, no data was sent.' : 'Obrigado — esta é uma demo visual, nenhum dado foi enviado.');">
+      <form class="form-box reveal">
         <div class="form-row">
           <div><label data-pt="Nome" data-en="Name">Nome</label><input type="text" required></div>
           <div><label>Email</label><input type="email" required></div>
         </div>
         <div class="form-row">
           <div><label data-pt="Telefone" data-en="Phone">Telefone</label><input type="text"></div>
-          <div><label data-pt="Assunto" data-en="Subject">Assunto</label>
+          <div><label data-pt="&Aacute;rea de Interesse" data-en="Area of Interest">&Aacute;rea de Interesse</label>
             <select>
-              <option data-pt="Orçamento" data-en="Quote">Orçamento</option>
-              <option data-pt="Suporte técnico" data-en="Technical support">Suporte técnico</option>
-              <option data-pt="Parceria" data-en="Partnership">Parceria</option>
+              <option>Conectividade</option>
+              <option data-pt="Tecnologia e Seguran&ccedil;a" data-en="Technology &amp; Security">Tecnologia e Seguran&ccedil;a</option>
+              <option>Energia</option>
+              <option>Agritech</option>
+              <option data-pt="Outro" data-en="Other">Outro</option>
             </select>
           </div>
         </div>
@@ -406,36 +320,41 @@
           <label data-pt="Mensagem" data-en="Message">Mensagem</label>
           <textarea></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="width:100%;text-align:center;" data-pt="Enviar Pedido" data-en="Send Request">Enviar Pedido</button>
+        <button type="submit" class="btn-primary" style="width:100%;text-align:center;justify-content:center;display:flex;" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
         <p class="form-note"></p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <div class="logo">MozSupport<span class="grupo">GRUPO</span></div>
-        <p data-pt="Conectamos. Protegemos. Inovamos. Transformamos." data-en="We connect. We protect. We innovate. We transform.">Conectamos. Protegemos. Inovamos. Transformamos.</p>
+        <img src="assets/logo/logo-wordmark.png" alt="MozSupport Grupo" style="filter:brightness(0) invert(1);">
+        <p data-pt="Solu&ccedil;&otilde;es integradas que conectam pessoas, empresas e comunidades a um futuro melhor e mais sustent&aacute;vel." data-en="Integrated solutions connecting people, businesses and communities to a better, more sustainable future.">Solu&ccedil;&otilde;es integradas que conectam pessoas, empresas e comunidades a um futuro melhor e mais sustent&aacute;vel.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.7h2.6l.4-3h-3v-1.9c0-.9.2-1.5 1.5-1.5h1.6V4.2C15.9 4.1 15 4 14 4c-2.4 0-4 1.5-4 4.1v2.2H7.4v3H10V21h3.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z"/></svg></a>
+          <a href="https://wa.me/258847026991" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.5-3-.3-.4.3-.4.8-1.3.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        </div>
       </div>
       <div class="foot-col">
-        <h5 data-pt="Empresa" data-en="Company">Empresa</h5>
+        <h5 data-pt="Grupo" data-en="Group">Grupo</h5>
         <ul>
-          <li><a href="quem-somos.html" data-pt="Quem Somos" data-en="About Us">Quem Somos</a></li>
-          <li><a href="divisoes.html" data-pt="Áreas de Atuação" data-en="Areas of Activity">Áreas de Atuação</a></li>
+          <li><a href="index.html#quem-somos" data-pt="Sobre N&oacute;s" data-en="About Us">Sobre N&oacute;s</a></li>
+          <li><a href="index.html#missao-visao" data-pt="Miss&atilde;o &amp; Vis&atilde;o" data-en="Mission &amp; Vision">Miss&atilde;o &amp; Vis&atilde;o</a></li>
+          <li><a href="index.html#valores" data-pt="Os Nossos Valores" data-en="Our Values">Os Nossos Valores</a></li>
+          <li><a href="index.html#compromisso" data-pt="O Nosso Compromisso" data-en="Our Commitment">O Nosso Compromisso</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h5 data-pt="Serviços" data-en="Services">Serviços</h5>
+        <h5 data-pt="Empresas" data-en="Companies">Empresas</h5>
         <ul>
-          <li><a href="internet.html">Internet</a></li>
-          <li><a href="datacenter.html">Data Center</a></li>
-          <li><a href="security.html" data-pt="Segurança Electrónica" data-en="Electronic Security">Segurança Electrónica</a></li>
-          <li><a href="energy.html" data-pt="Energia Solar" data-en="Solar Energy">Energia Solar</a></li>
-          <li><a href="agritech.html">Agritech</a></li>
+          <li><a href="conectividade.html" data-pt="Conectividade" data-en="Connectivity">Conectividade</a></li>
+          <li><a href="tecnologia-seguranca.html" data-pt="Tecnologia e Segurança Electrónica" data-en="Technology &amp; Electronic Security">Tecnologia e Segurança Electrónica</a></li>
+          <li><a href="energia.html" data-pt="Energia" data-en="Energy">Energia</a></li>
+          <li><a href="agritech.html" data-pt="Agritech" data-en="Agritech">Agritech</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -443,36 +362,19 @@
         <ul>
           <li><a href="mailto:support@mozsupport.com">support@mozsupport.com</a></li>
           <li><a href="https://wa.me/258847026991" target="_blank" rel="noopener">+258 84 702 6991</a></li>
-          <li><a href="https://www.google.com/maps/place/Manga,+Beira/@-19.7669035,34.8514221,6871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1f2a420f95585ad3:0x382ac104c3ca3ed9!8m2!3d-19.7659442!4d34.8706935!16s%2Fg%2F1v9gxr8h?entry=ttu&g_ep=EgoyMDI2MDcyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" data-pt="Beira, Moçambique" data-en="Beira, Mozambique">Beira, Moçambique</a></li>
+          <li><a href="https://www.google.com/maps/place/Manga,+Beira/@-19.7669035,34.8514221,6871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1f2a420f95585ad3:0x382ac104c3ca3ed9!8m2!3d-19.7659442!4d34.8706935!16s%2Fg%2F1v9gxr8h?entry=ttu&amp;g_ep=EgoyMDI2MDcyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" data-pt="Beira, Mo&ccedil;ambique" data-en="Beira, Mozambique">Beira, Mo&ccedil;ambique</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 MozSupport Grupo. <span data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos reservados.</span></span>
+      <span>&copy; 2026 MOZSUPPORT GRUPO. <span data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos reservados.</span></span>
+      <span data-pt='"Solu&ccedil;&otilde;es que Transformam Comunidades."' data-en='"Solutions that Transform Communities."'>"Solu&ccedil;&otilde;es que Transformam Comunidades."</span>
     </div>
   </div>
 </footer>
-
-<!-- ================= CHAT WIDGET ================= -->
-<a class="whatsapp-fab" href="https://wa.me/258847026991" target="_blank" aria-label="WhatsApp"><img src="assets/icons/whatsapp.webp" alt="WhatsApp" width="22" height="22"></a>
-<button class="chat-fab" id="chatFab" aria-label="Assistente virtual">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 3.5V16H4z"/><line x1="7.5" y1="8.5" x2="16.5" y2="8.5"/><line x1="7.5" y1="12" x2="13.5" y2="12"/></svg>
-</button>
-<div class="chat-panel" id="chatPanel">
-  <div class="chat-head">
-    <div class="dotlive"></div>
-    <div><strong data-pt="Assistente MozSupport" data-en="MozSupport Assistant">Assistente MozSupport</strong><span data-pt="Online agora &middot; resposta em segundos" data-en="Online now &middot; replies in seconds">Online agora &middot; resposta em segundos</span></div>
-    <button class="chat-reset" id="chatReset" type="button" data-pt-title="Recome&ccedil;ar" data-en-title="Restart" title="Recome&ccedil;ar" aria-label="Recome&ccedil;ar">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg>
-    </button>
-  </div>
-  <div class="chat-body" id="chatBody"></div>
-  <div class="chat-quick" id="chatQuick"></div>
-  <div class="chat-input">
-    <input type="text" id="chatInputField" data-pt-ph="Escreva a sua mensagem..." data-en-ph="Type your message..." placeholder="Escreva a sua mensagem...">
-    <button id="chatSendBtn" aria-label="Enviar"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10.5" y2="13.5"/><polygon points="21 3 14 21 10.5 13.5 3 10 21 3"/></svg></button>
-  </div>
-</div>
+<a class="whatsapp-fab" href="https://wa.me/258847026991" target="_blank" aria-label="WhatsApp">
+  <img src="assets/icons/whatsapp.webp" alt="WhatsApp" width="22" height="22">
+</a>
 <script src="assets/main.js"></script>
 </body>
 </html>
