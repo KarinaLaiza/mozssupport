@@ -72,6 +72,7 @@ nav{
 }
 .logo img{height:34px;width:auto;display:block;}
 .nav-links{display:flex;gap:28px;font-size:14.5px;color:var(--text);font-weight:600;align-items:center;}
+.nav-links .mobile-only-flex{display:none;}
 .nav-links a, .nav-links .has-drop > span{position:relative;padding:6px 0;transition:color .2s;cursor:pointer;display:flex;align-items:center;gap:5px;}
 .nav-links a:hover, .nav-links .has-drop:hover > span{color:var(--blue);}
 .has-drop{position:relative;}
@@ -120,8 +121,8 @@ nav{
 .hero{
   position:relative;min-height:92vh;display:flex;flex-direction:column;padding-top:78px;
   background:
-    linear-gradient(100deg, rgba(8,20,50,0.94) 0%, rgba(8,20,50,0.80) 34%, rgba(8,20,50,0.48) 62%, rgba(8,20,50,0.30) 100%),
-    url('images/hero-photo.jpg') center 42%/cover no-repeat,
+    linear-gradient(100deg, rgba(8,20,50,0.55) 0%, rgba(8,20,50,0.30) 40%, rgba(8,20,50,0.08) 55%, rgba(8,20,50,0) 100%),
+    url('images/hero-photo.jpg') center center/cover no-repeat,
     var(--navy-deep);
   overflow:hidden;
 }
@@ -337,7 +338,6 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
     padding:0;margin-top:4px;width:100%;
   }
   .drop-menu a{justify-content:center;}
-  .mobile-only-flex{display:none;}
   .nav-links .lang-switch.mobile-only-flex{display:flex;margin:6px auto 14px;}
   .nav-links .nav-cta.mobile-only-flex{display:flex;align-items:center;justify-content:center;margin:18px auto 0;width:100%;max-width:320px;padding:15px 20px;}
   .nav-right{display:none;}
