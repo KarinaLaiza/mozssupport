@@ -5,7 +5,7 @@ function setLang(lang){
   document.documentElement.lang = lang === 'en' ? 'en' : 'pt-MZ';
   document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
   document.querySelectorAll('.lang-btn .code').forEach(el=> el.textContent = lang.toUpperCase());
-  document.querySelectorAll('.lang-btn .flag').forEach(el=> el.textContent = lang==='en' ? '🇬🇧' : '🇲🇿');
+  document.querySelectorAll('.lang-btn .flag img').forEach(el=> el.src = lang==='en' ? 'assets/icons/flag-us.webp' : 'assets/icons/flag-pt.webp');
   document.querySelectorAll('[data-pt][data-en]').forEach(el=>{
     const val = lang==='en' ? el.dataset.en : el.dataset.pt;
     if(el.innerHTML.includes('<span') || el.innerHTML.includes('<br')){ el.innerHTML = val; } else { el.textContent = val; }

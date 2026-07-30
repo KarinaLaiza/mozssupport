@@ -94,7 +94,10 @@ nav{
   display:flex;align-items:center;gap:7px;background:var(--bg-page);border:1px solid var(--line);
   padding:8px 12px;border-radius:20px;font-size:13px;font-weight:600;color:var(--text);
 }
-.lang-btn .flag{font-size:15px;line-height:1;}
+.lang-btn .flag{display:flex;align-items:center;}
+.lang-btn .flag img{width:20px;height:14px;object-fit:cover;border-radius:2px;display:block;box-shadow:0 0 0 1px rgba(11,30,77,0.08);}
+.lang-menu button span{display:flex;align-items:center;justify-content:center;width:20px;}
+.lang-menu button span img{width:20px;height:14px;object-fit:cover;border-radius:2px;display:block;box-shadow:0 0 0 1px rgba(11,30,77,0.08);}
 .lang-btn .chev{transition:transform .18s;}
 .lang-switch.open .lang-btn .chev{transform:rotate(180deg);}
 .lang-menu{
@@ -133,7 +136,7 @@ nav{
   mask-image:radial-gradient(ellipse 80% 60% at 30% 40%, black, transparent 75%);
 }
 .hero-inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 28px;width:100%;flex:1;display:flex;align-items:center;}
-.hero-copy{max-width:660px;padding:56px 0 40px;}
+.hero-copy{max-width:660px;padding:56px 0 110px;}
 .hero-copy .eyebrow{color:var(--green-bright);}
 .hero-copy .eyebrow::before{background:var(--green-bright);}
 .hero-copy h1{font-size:clamp(34px,5vw,56px);line-height:1.1;color:#fff;}
@@ -156,8 +159,8 @@ nav{
 .btn-outline-navy:hover{background:var(--navy);color:#fff;}
 
 /* ---------- EMPRESAS / ÁREAS CARDS ---------- */
-.areas-strip{background:var(--bg-white);position:relative;z-index:3;margin-top:-64px;}
-.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.areas-strip{background:var(--bg-white);position:relative;z-index:3;margin-top:-44px;}
+.area-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
 .area-card{
   background:var(--bg-white);border:1px solid var(--line);border-radius:16px;overflow:hidden;
   box-shadow:0 18px 40px rgba(11,30,77,0.08);transition:transform .2s, box-shadow .2s;display:flex;flex-direction:column;
@@ -288,12 +291,7 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
 .foot-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:34px;margin-bottom:48px;}
 .foot-brand img{height:32px;width:auto;margin-bottom:14px;}
 .foot-brand p{color:#8FA0C4;font-size:13.5px;max-width:280px;}
-.foot-social{display:flex;gap:10px;margin-top:20px;}
-.foot-social a{
-  width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:#C7D0E4;
-  transition:background .15s, color .15s;
-}
-.foot-social a:hover{background:var(--blue);color:#fff;}
+.foot-slogan{font-family:var(--disp);font-weight:700;color:var(--green-bright);font-size:16px;margin-top:20px;line-height:1.4;max-width:280px;}
 .foot-col h5{font-family:var(--mono);font-size:11.5px;color:#7C8CAE;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;}
 .foot-col ul li{margin-bottom:10px;}
 .foot-col ul li a{font-size:13.5px;color:#C7D0E4;}
@@ -342,9 +340,10 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   .nav-links .nav-cta.mobile-only-flex{display:flex;align-items:center;justify-content:center;margin:18px auto 0;width:100%;max-width:320px;padding:15px 20px;}
   .nav-right{display:none;}
 
-  .hero-copy{padding:44px 0 32px;}
+  .hero-copy{padding:44px 0 90px;}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px 16px;}
-  .area-grid{grid-template-columns:repeat(2,1fr);}
+  .area-grid{grid-template-columns:repeat(3,1fr);}
+  .areas-strip{margin-top:-32px;}
   .fazemos-grid{grid-template-columns:1fr;}
   .about-wrap{grid-template-columns:1fr;gap:36px;}
   .vm-grid{grid-template-columns:1fr;}
@@ -360,7 +359,8 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   .hero-copy h1{font-size:clamp(28px,8vw,38px);}
   .hero-btns{flex-direction:column;align-items:stretch;}
   .hero-btns a{text-align:center;justify-content:center;}
-  .areas-strip{margin-top:-40px;}
+  .hero-copy{padding-bottom:64px;}
+  .areas-strip{margin-top:-24px;}
   .area-grid{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:1fr 1fr;}
   .sectors-grid{gap:22px 26px;}
