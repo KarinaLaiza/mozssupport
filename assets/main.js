@@ -35,31 +35,92 @@ document.addEventListener('click', ()=>{
   document.querySelectorAll('.lang-switch.open').forEach(o=>o.classList.remove('open'));
 });
 
-/* ---------- mobile nav drawer ---------- */
+/* ---------- mobile nav drawer (hamburger menu) ---------- */
 const burgerBtn = document.querySelector('.burger');
 const navLinksEl = document.querySelector('.nav-links');
-function closeMobileNav(){
+const MOBILE_NAV_BREAKPOINT = 1024; /* tem de coincidir com o breakpoint do CSS onde o menu colapsa */
+const NAV_TRANSITION_MS = 260; /* ligeiramente acima da transição definida no CSS, para evitar cliques duplicados a meio da animação */
+const mobileNavQuery = window.matchMedia(`(max-width: ${MOBILE_NAV_BREAKPOINT}px)`);
+let navIsAnimating = false;
+let navIsOpen = false;
+
+function lockNavToggle(){
+  navIsAnimating = true;
+  window.setTimeout(()=>{ navIsAnimating = false; }, NAV_TRANSITION_MS);
+}
+
+/* aria-hidden só faz sentido quando o menu é uma drawer (mobile/tablet);
+   no desktop o .nav-links está sempre visível e nunca deve ficar aria-hidden */
+function syncNavAriaHidden(){
   if(!navLinksEl) return;
+  if(mobileNavQuery.matches) navLinksEl.setAttribute('aria-hidden', navIsOpen ? 'false' : 'true');
+  else navLinksEl.removeAttribute('aria-hidden');
+}
+
+function closeMobileNav(opts){
+  const returnFocus = opts && opts.returnFocus;
+  if(!navLinksEl || !navIsOpen) return;
+  navIsOpen = false;
+  lockNavToggle();
   navLinksEl.classList.remove('open');
   document.body.classList.remove('nav-open');
-  if(burgerBtn) burgerBtn.setAttribute('aria-expanded', 'false');
+  syncNavAriaHidden();
+  if(burgerBtn){
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    if(returnFocus) burgerBtn.focus();
+  }
 }
+
 function openMobileNav(){
-  if(!navLinksEl) return;
+  if(!navLinksEl || navIsOpen) return;
+  navIsOpen = true;
+  lockNavToggle();
   navLinksEl.classList.add('open');
   document.body.classList.add('nav-open');
+  syncNavAriaHidden();
   if(burgerBtn) burgerBtn.setAttribute('aria-expanded', 'true');
+  const firstLink = navLinksEl.querySelector('a, button');
+  if(firstLink) firstLink.focus();
 }
+
+function toggleMobileNav(){
+  if(navIsAnimating) return; /* impede bugs de múltiplos cliques durante a transição */
+  if(navIsOpen) closeMobileNav({returnFocus:true});
+  else openMobileNav();
+}
+
 if (burgerBtn && navLinksEl){
-  burgerBtn.addEventListener('click', ()=>{
-    if (navLinksEl.classList.contains('open')) closeMobileNav();
-    else openMobileNav();
+  syncNavAriaHidden();
+  mobileNavQuery.addEventListener ? mobileNavQuery.addEventListener('change', syncNavAriaHidden) : mobileNavQuery.addListener(syncNavAriaHidden);
+
+  burgerBtn.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    toggleMobileNav();
   });
+
+  /* fecha ao clicar num link do menu */
   navLinksEl.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', closeMobileNav);
+    a.addEventListener('click', ()=> closeMobileNav());
   });
+
+  /* fecha ao clicar fora do menu (mas não durante a animação de abertura) */
+  document.addEventListener('click', (e)=>{
+    if(!navIsOpen) return;
+    if(navLinksEl.contains(e.target) || e.target === burgerBtn || burgerBtn.contains(e.target)) return;
+    closeMobileNav();
+  });
+
+  /* impede que um clique dentro do próprio menu (fora dos links) o feche */
+  navLinksEl.addEventListener('click', (e)=> e.stopPropagation());
+
+  /* fecha com a tecla Escape e devolve o foco ao botão do menu */
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && navIsOpen) closeMobileNav({returnFocus:true});
+  });
+
+  /* fecha automaticamente ao redimensionar para desktop */
   window.addEventListener('resize', ()=>{
-    if (window.innerWidth > 1080) closeMobileNav();
+    if (window.innerWidth > MOBILE_NAV_BREAKPOINT) closeMobileNav();
   });
 }
 

@@ -343,7 +343,8 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
 .reveal.show{opacity:1;transform:none;}
 
 /* ================= RESPONSIVE ================= */
-@media (max-width:1080px){
+/* Breakpoints: ≤1024px (tablets), ≤768px (tablets pequenos / mobile grande), ≤480px (smartphones) */
+@media (max-width:1024px){
   body.nav-open{overflow:hidden;}
   .burger{
     display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;position:relative;z-index:260;flex-shrink:0;
@@ -382,11 +383,12 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   .foot-top{grid-template-columns:1fr 1fr;}
 }
 
-@media (max-width:680px){
+@media (max-width:768px){
   .wrap{padding:0 20px;}
   .section{padding:64px 0;}
   .section-head{margin-bottom:32px;}
   .hero-copy h1{font-size:clamp(28px,8vw,38px);}
+  .hero-copy .lede{font-size:clamp(14.5px,3.6vw,17px);}
   .hero-btns{flex-direction:column;align-items:stretch;}
   .hero-btns a{text-align:center;justify-content:center;}
   .hero-copy{padding-bottom:64px;}
@@ -396,17 +398,22 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   .sectors-grid{gap:22px 26px;}
   .sector-item{width:80px;}
   .sector-item .ic{width:54px;height:54px;}
+  .about-figure{padding:26px;}
+  .vm-card{padding:26px;}
   .form-row{grid-template-columns:1fr;}
   .form-box{padding:22px 20px;}
+  .form-box select{max-width:100%;}
   .purpose-band{padding:40px 24px;}
   .foot-top{grid-template-columns:1fr;gap:30px;}
   .foot-bottom{flex-direction:column;align-items:flex-start;gap:10px;}
-  .placeholder-card{padding:40px 26px;}
+  .placeholder-card{padding:40px 26px;width:100%;}
   nav{padding:0 18px;}
   .logo img{height:26px;}
   .proj-card{flex:0 0 210px;}
   .pn-head h2{font-size:19px;}
   .news-thumb{width:60px;height:60px;}
+  .contact-info .item{gap:12px;}
+  .contact-info .item .ic{width:36px;height:36px;}
 }
 
 /* ---------- LISTING PAGES (Projetos / Notícias) ---------- */
@@ -433,3 +440,100 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
 .article-body{max-width:760px;margin:0 auto;padding:48px 28px 90px;}
 .article-body p{font-size:16px;line-height:1.75;color:var(--text-dim);margin-bottom:20px;}
 .article-body h2{font-size:21px;color:var(--navy);margin:32px 0 12px;}
+
+/* =======================================================
+   RESPONSIVO — Páginas de Listagem (Projectos/Notícias) e Artigo
+   Estas grelhas não tinham nenhuma regra responsiva definida:
+   em ecrãs estreitos os cartões ficavam demasiado espremidos
+   dentro de 3 colunas fixas. Corrigido abaixo por breakpoint.
+   ======================================================= */
+@media (max-width:1024px){
+  .projects-grid{grid-template-columns:repeat(2,1fr);}
+  .listing-hero{padding:130px 0 44px;}
+}
+
+@media (max-width:768px){
+  .projects-grid{grid-template-columns:1fr;gap:18px;}
+  .news-grid-list{max-width:100%;}
+  .news-grid-list .news-thumb{width:76px;height:76px;}
+  .listing-hero{padding:120px 0 36px;}
+  .listing-section{padding:40px 0 64px;}
+  .article-hero{height:260px;margin-top:64px;}
+  .article-hero-inner{padding-bottom:22px;}
+  .article-body{padding:36px 20px 64px;}
+  .article-body h2{font-size:19px;}
+}
+
+/* ---------- 480px — smartphones ---------- */
+@media (max-width:480px){
+  .wrap{padding:0 16px;}
+  nav{padding:0 14px;height:66px;}
+  .logo img{height:22px;}
+  .section{padding:48px 0;}
+  .section-head h2{font-size:clamp(22px,7vw,28px);}
+  .section-head p{font-size:14.5px;}
+
+  .hero{min-height:auto;}
+  .hero-copy{padding:36px 0 52px;}
+  .hero-copy h1{font-size:clamp(24px,8.5vw,32px);}
+  .hero-copy .lede{font-size:14.5px;}
+  .btn-primary, .btn-secondary, .btn-outline-navy{padding:13px 18px;font-size:14px;}
+
+  .area-card h3{font-size:17px;}
+  .area-photo{height:96px;}
+  .area-ic{width:46px;height:46px;left:16px;bottom:-20px;}
+  .area-card p{margin:12px 20px 18px;font-size:13.5px;}
+  .area-card h3, .area-card .sub{margin-left:20px;margin-right:20px;}
+  .area-card .explore{margin:0 20px 20px;}
+
+  .stats-band{padding:32px 0;}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:22px 14px;}
+  .stat-item{gap:10px;}
+  .stat-item .num{font-size:20px;}
+  .stat-item .ic{width:36px;height:36px;}
+
+  .sectors-grid{gap:18px 20px;}
+  .sector-item{width:72px;}
+  .sector-item .ic{width:48px;height:48px;}
+  .sector-item span{font-size:12px;}
+
+  .about-figure{padding:22px;}
+  .about-figure .quote{font-size:17px;}
+
+  .pn-head h2{font-size:17px;}
+  .proj-card{flex:0 0 180px;}
+  .proj-photo{height:110px;}
+  .news-thumb{width:52px;height:52px;}
+  .news-body h4{font-size:13.5px;}
+
+  .check-item{font-size:14px;}
+  .pill{padding:9px 16px;font-size:13px;}
+  .vm-card{padding:22px;}
+  .vm-card h3{font-size:17px;}
+
+  .purpose-band{padding:32px 18px;border-radius:16px;}
+  .purpose-band .slogan{font-size:clamp(20px,7vw,26px);}
+
+  .form-box{padding:18px 16px;}
+  .contact-info .item p, .contact-info .item a{font-size:12.5px;}
+
+  .placeholder-card{padding:32px 20px;border-radius:16px;}
+  .placeholder-card h1{font-size:24px;}
+  .placeholder-card .btns{flex-direction:column;width:100%;}
+  .placeholder-card .btns a{text-align:center;justify-content:center;}
+
+  .foot-brand p, .foot-slogan{max-width:100%;}
+  .whatsapp-fab{width:46px;height:46px;bottom:18px;right:18px;}
+
+  .listing-hero{padding:108px 0 30px;}
+  .listing-hero h1{font-size:clamp(24px,7vw,30px);}
+  .projects-grid{gap:14px;}
+  .news-grid-list .news-item{padding:8px;gap:10px;}
+  .news-grid-list .news-thumb{width:64px;height:64px;}
+
+  .article-hero{height:220px;margin-top:58px;}
+  .article-hero h1{font-size:clamp(21px,6.5vw,26px);}
+  .article-tag{font-size:10px;padding:5px 10px;}
+  .article-body{padding:28px 16px 48px;}
+  .article-body p{font-size:15px;}
+}
