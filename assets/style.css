@@ -83,7 +83,15 @@ nav{
   opacity:0;visibility:hidden;transform:translateX(-50%) translateY(6px);
   transition:opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
 }
-.has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition:opacity .18s ease, transform .18s ease;}
+/* Dropdown "Empresas" só abre com :hover em dispositivos com rato/desktop real.
+   Nota importante: esta regra tem mais especificidade do que o reset feito
+   na media query mobile (linha ~364), por isso TEM de ficar limitada a
+   min-width:1025px — caso contrário, em ecrãs tácteis o primeiro toque
+   simula um estado de :hover e esta regra reaplica position/transform de
+   desktop por cima do layout mobile, desalinhando o submenu "Empresas". */
+@media (min-width:1025px){
+  .has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition:opacity .18s ease, transform .18s ease;}
+}
 .drop-menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;font-size:14px;color:var(--text);font-weight:500;}
 .drop-menu a:hover{background:var(--bg-page);color:var(--blue);}
 .drop-menu a .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
