@@ -134,7 +134,7 @@ nav{
   position:relative;min-height:92vh;display:flex;flex-direction:column;padding-top:78px;
   background:
     linear-gradient(100deg, rgba(8,20,50,0.55) 0%, rgba(8,20,50,0.30) 40%, rgba(8,20,50,0.08) 55%, rgba(8,20,50,0) 100%),
-    url('images/hero-photo.jpg') center center/cover no-repeat,
+    url('images/hero-photo.jpg') left center/cover no-repeat,
     var(--navy-deep);
   overflow:hidden;
 }
@@ -511,12 +511,22 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   .about-figure .quote{font-size:17px;}
 
   .pn-head h2{font-size:17px;}
-  .proj-card{flex:0 0 180px;}
-  .proj-photo{height:110px;}
-  .news-thumb{width:52px;height:52px;}
-  .news-item{flex-direction:column;align-items:flex-start;}
-  .news-body{width:100%;}
-  .news-body h4{font-size:13.5px;}
+  /* Make project cards and news cards more visible on small smartphones */
+  .proj-card{
+    flex:1 1 100%;
+    min-width:0;
+    max-width:100%;
+    border-radius:12px;
+    box-shadow:0 12px 26px rgba(11,30,77,0.08);
+  }
+  .proj-photo{height:200px;background-position:left center;}
+  .proj-body{padding:18px 16px 20px;}
+
+  /* News items: larger thumbs and more spacing to improve legibility */
+  .news-thumb{width:96px;height:96px;border-radius:12px;background-position:left center;flex-shrink:0;}
+  .news-item{flex-direction:row;align-items:center;padding:12px;border-radius:14px;gap:16px;}
+  .news-body{width:calc(100% - 112px);min-width:0;}
+  .news-body h4{font-size:16px;line-height:1.3;margin-bottom:6px;}
 
   .check-item{font-size:14px;}
   .pill{padding:9px 16px;font-size:13px;}
