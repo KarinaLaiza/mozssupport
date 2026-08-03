@@ -361,7 +361,7 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   body.nav-open .burger .icon-close{display:flex;}
 
   .nav-links{
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
     position:fixed;inset:0;z-index:250;background:rgba(255,255,255,0.99);
     padding:80px 26px 32px;gap:4px;overflow-y:auto;
     visibility:hidden;opacity:0;transform:translateX(24px);
