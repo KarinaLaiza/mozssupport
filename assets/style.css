@@ -230,11 +230,11 @@ nav{
 .pn-see-all{font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap;}
 .pn-see-all:hover{text-decoration:underline;}
 
-.proj-scroll{display:flex;gap:18px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;}
+.proj-scroll{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable both-edges;}
 .proj-scroll::-webkit-scrollbar{height:6px;}
 .proj-scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:6px;}
 .proj-card{
-  flex:0 0 240px;scroll-snap-align:start;background:var(--bg-white);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  flex:0 0 240px;min-width:240px;scroll-snap-align:start;background:var(--bg-white);border:1px solid var(--line);border-radius:14px;overflow:hidden;
   box-shadow:0 14px 30px rgba(11,30,77,0.07);transition:transform .18s, box-shadow .18s;display:block;
 }
 .proj-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(11,30,77,0.12);}
@@ -248,11 +248,11 @@ nav{
 .proj-card:hover .proj-arrow{background:var(--blue);border-color:var(--blue);color:#fff;}
 
 .news-list{display:flex;flex-direction:column;gap:14px;width:100%;}
-.news-item{display:flex;width:100%;gap:14px;align-items:center;padding:10px;border-radius:12px;transition:background .15s;min-width:0;}
+.news-item{display:flex;width:100%;gap:14px;align-items:flex-start;padding:10px;border-radius:12px;transition:background .15s;min-width:0;}
 .news-item:hover{background:var(--bg-page);}
 .news-thumb{width:72px;height:72px;border-radius:10px;background-size:cover;background-position:center;flex-shrink:0;}
-.news-body{flex:1;min-width:0;overflow-wrap:anywhere;}
-.news-body h4{font-size:14.5px;line-height:1.4;color:var(--navy);margin-bottom:6px;}
+.news-body{flex:1;min-width:0;overflow-wrap:anywhere;word-break:break-word;}
+.news-body h4{font-size:14.5px;line-height:1.4;color:var(--navy);margin-bottom:6px;white-space:normal;}
 .news-date{font-size:12px;color:var(--text-faint);}
 
 /* ---------- COMPROMISSO / VALORES LISTS ---------- */
@@ -514,6 +514,8 @@ footer{background:var(--navy-deep);padding:64px 0 28px;}
   .proj-card{flex:0 0 180px;}
   .proj-photo{height:110px;}
   .news-thumb{width:52px;height:52px;}
+  .news-item{flex-direction:column;align-items:flex-start;}
+  .news-body{width:100%;}
   .news-body h4{font-size:13.5px;}
 
   .check-item{font-size:14px;}
