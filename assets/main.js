@@ -3,27 +3,70 @@ const LANG_STORAGE_KEY = 'mozsupport-lang';
 
 function isEnglish(){ return document.documentElement.lang === 'en'; }
 
-function setLang(lang){
-  const normalizedLang = lang === 'en' ? 'en' : 'pt-MZ';
+function normalizeLang(lang){
+  return lang === 'en' ? 'en' : 'pt-MZ';
+}
+
+function getPreferredLang(){
+  const params = new URLSearchParams(window.location.search);
+  const paramLang = params.get('lang');
+  if(paramLang === 'en' || paramLang === 'pt') return paramLang;
+
+  const storedLang = localStorage.getItem(LANG_STORAGE_KEY);
+  if(storedLang === 'en' || storedLang === 'pt-MZ') return storedLang === 'en' ? 'en' : 'pt';
+
+  return 'pt';
+}
+
+function setLang(lang, options = {}){
+  const normalizedLang = normalizeLang(lang);
+  const uiLang = normalizedLang === 'en' ? 'en' : 'pt';
+  const { persist = true, updateUrl = true } = options;
+
   document.documentElement.lang = normalizedLang;
-  localStorage.setItem(LANG_STORAGE_KEY, normalizedLang);
-  document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
-  document.querySelectorAll('.lang-btn .code').forEach(el=> el.textContent = lang.toUpperCase());
-  document.querySelectorAll('.lang-btn .flag img').forEach(el=> el.src = lang==='en' ? 'assets/icons/flag-us.webp' : 'assets/icons/flag-pt.webp');
+  if(persist) localStorage.setItem(LANG_STORAGE_KEY, normalizedLang);
+
+  document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active', b.dataset.lang===uiLang));
+  document.querySelectorAll('.lang-btn .code').forEach(el=> el.textContent = uiLang.toUpperCase());
+  document.querySelectorAll('.lang-btn .flag img').forEach(el=> el.src = uiLang==='en' ? 'assets/icons/flag-us.webp' : 'assets/icons/flag-pt.webp');
   document.querySelectorAll('[data-pt][data-en]').forEach(el=>{
-    const val = lang==='en' ? el.dataset.en : el.dataset.pt;
+    const val = uiLang==='en' ? el.dataset.en : el.dataset.pt;
     if(el.innerHTML.includes('<span') || el.innerHTML.includes('<br')){ el.innerHTML = val; } else { el.textContent = val; }
   });
   document.querySelectorAll('[data-pt-ph]').forEach(el=>{
-    el.setAttribute('placeholder', lang==='en' ? el.dataset.enPh : el.dataset.ptPh);
+    el.setAttribute('placeholder', uiLang==='en' ? el.dataset.enPh : el.dataset.ptPh);
   });
+
+  if(updateUrl){
+    const params = new URLSearchParams(window.location.search);
+    if(uiLang === 'en') params.set('lang', 'en');
+    else params.delete('lang');
+
+    const nextUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ''}${window.location.hash}`;
+    window.history.replaceState({}, '', nextUrl);
+  }
 }
 
 function applyStoredLang(){
-  const storedLang = localStorage.getItem(LANG_STORAGE_KEY);
-  if(storedLang === 'en' || storedLang === 'pt-MZ'){
-    setLang(storedLang === 'en' ? 'en' : 'pt');
-  }
+  setLang(getPreferredLang(), { persist: true, updateUrl: false });
+}
+
+function decorateInternalLinks(){
+  const langToUse = getPreferredLang();
+  document.querySelectorAll('a[href]').forEach(link=>{
+    const href = link.getAttribute('href');
+    if(!href || /^https?:\/\//i.test(href) || /^mailto:/i.test(href) || /^tel:/i.test(href)) return;
+
+    try{
+      const url = new URL(href, window.location.href);
+      if(url.origin !== window.location.origin) return;
+      if(langToUse === 'en') url.searchParams.set('lang', 'en');
+      else url.searchParams.delete('lang');
+      link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+    } catch (error) {
+      console.warn('Invalid link', href, error);
+    }
+  });
 }
 
 document.querySelectorAll('.lang-switch').forEach(sw=>{
@@ -47,6 +90,24 @@ document.addEventListener('click', ()=>{
 });
 
 applyStoredLang();
+decorateInternalLinks();
+
+document.addEventListener('click', (event)=>{
+  const link = event.target.closest('a[href]');
+  if(!link) return;
+  const href = link.getAttribute('href');
+  if(!href || /^https?:\/\//i.test(href) || /^mailto:/i.test(href) || /^tel:/i.test(href)) return;
+  try{
+    const url = new URL(href, window.location.href);
+    if(url.origin !== window.location.origin) return;
+    const langToUse = getPreferredLang();
+    if(langToUse === 'en') url.searchParams.set('lang', 'en');
+    else url.searchParams.delete('lang');
+    link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+  } catch (error) {
+    console.warn('Invalid link', href, error);
+  }
+});
 
 /* ---------- mobile nav drawer (hamburger menu) ---------- */
 const burgerBtn = document.querySelector('.burger');
