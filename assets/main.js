@@ -1,8 +1,12 @@
 /* ---------- language switch (PT/EN) ---------- */
+const LANG_STORAGE_KEY = 'mozsupport-lang';
+
 function isEnglish(){ return document.documentElement.lang === 'en'; }
 
 function setLang(lang){
-  document.documentElement.lang = lang === 'en' ? 'en' : 'pt-MZ';
+  const normalizedLang = lang === 'en' ? 'en' : 'pt-MZ';
+  document.documentElement.lang = normalizedLang;
+  localStorage.setItem(LANG_STORAGE_KEY, normalizedLang);
   document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
   document.querySelectorAll('.lang-btn .code').forEach(el=> el.textContent = lang.toUpperCase());
   document.querySelectorAll('.lang-btn .flag img').forEach(el=> el.src = lang==='en' ? 'assets/icons/flag-us.webp' : 'assets/icons/flag-pt.webp');
@@ -13,6 +17,13 @@ function setLang(lang){
   document.querySelectorAll('[data-pt-ph]').forEach(el=>{
     el.setAttribute('placeholder', lang==='en' ? el.dataset.enPh : el.dataset.ptPh);
   });
+}
+
+function applyStoredLang(){
+  const storedLang = localStorage.getItem(LANG_STORAGE_KEY);
+  if(storedLang === 'en' || storedLang === 'pt-MZ'){
+    setLang(storedLang === 'en' ? 'en' : 'pt');
+  }
 }
 
 document.querySelectorAll('.lang-switch').forEach(sw=>{
@@ -34,6 +45,8 @@ document.querySelectorAll('.lang-switch').forEach(sw=>{
 document.addEventListener('click', ()=>{
   document.querySelectorAll('.lang-switch.open').forEach(o=>o.classList.remove('open'));
 });
+
+applyStoredLang();
 
 /* ---------- mobile nav drawer (hamburger menu) ---------- */
 const burgerBtn = document.querySelector('.burger');
